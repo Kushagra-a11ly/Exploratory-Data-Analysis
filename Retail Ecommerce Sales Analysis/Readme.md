@@ -1,3 +1,6 @@
+![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/cc4b410da91d1757ace0fa501009df24d4f864e0/Retail%20Ecommerce%20Sales%20Analysis/Cover%20image.png)
+
+
 🛒 Retail Ecommerce Sales Analysis
 
 A complete data exploration project uncovering customer behavior, product performance, and revenue patterns.

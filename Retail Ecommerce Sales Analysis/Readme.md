@@ -1,92 +1,87 @@
 ![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/cc4b410da91d1757ace0fa501009df24d4f864e0/Retail%20Ecommerce%20Sales%20Analysis/Cover%20image.png)
 
-
 🛒 Retail Ecommerce Sales Analysis
 
-A complete data exploration project uncovering customer behavior, product performance, and revenue patterns.
+A complete Exploratory Data Analysis (EDA) project uncovering customer behavior, product performance, and revenue patterns.
 
-📌 Overview:
+📌 Overview
 
-This project presents an in-depth Retail Ecommerce Sales Analysis using real-world-style transactional data. 
+This project provides an in-depth analysis of Retail Ecommerce Sales using real-world–style transactional data. 
 
-The analysis focuses on understanding sales trends, customer segments, regional performance, product behavior, pricing impact, discount strategies, and profit distribution.
+The goal is to identify patterns across customer segments, product categories, regional markets, pricing, and profitability.
 
-Through structured Exploratory Data Analysis (EDA), visual insights, and data-driven observations, this project highlights how retail businesses can optimize decisions regarding operations, marketing, inventory, and profitability.
+Through structured EDA, visual insights, and data-driven observations, this project demonstrates how retail businesses can optimize decisions related to marketing, inventory, operations, and strategic planning.
 
-📁 Dataset Description:
+📁 Dataset Description
 
-The dataset contains detailed order-level information, including:
+The dataset includes detailed order-level information:
 
-Order_ID – Unique identifier for each purchase.
+1.	Order_ID – Unique purchase identifier
+2.	Order_Date– Date of transaction
+3.	Customer_ID– Unique customer code
+4.	Segment – Consumer, Corporate, Home Office
+5.	Region– East, West, Central, South
+6.	Category– Furniture, Office Supplies, Technology
+7.	Sub_Category– Detailed product type
+8.	Product_ID – Identifier for sold items
+9.	Quantity– Units purchased
+10.	Price– Price per unit
+11.	Discount – Discount applied
+12.	Sales – Total sales after discount
+13.	Profit – Net profit per order
 
-Order_Date – Date of purchase.
+This structure supports deep analysis of pricing, customers, revenue patterns, and operational efficiency.
 
-Customer_ID – Customer unique code.
+ 🎯 Project Objectives
 
-Segment – Customer group (Consumer, Corporate, Home Office).
+1.	Analyze sales performance across time, segments, and regions
+2.	Identify top-selling and high-profit product categories
+3.	Study discount impact on revenue and profitability
+4.	Visualize profit trends, sales distribution, and customer behavior
+5.	Explore correlations among quantity, price, profit, and sales
+6.	Detect anomalies, outliers, and irregular buying behavior
 
-Region – Regional market (East, West, Central, South).
+ 📊 Key Insights
 
-Category – Main product category (Furniture, Office Supplies, Technology).
+1.	Clear monthly and seasonal sales fluctuations
+2.	Significant differences in regional profitability
+3.	Category-level revenue and profit trends
+4.	Discount strategies greatly impact profit margins
+5.	Segment-wise buying behaviors are distinct
+6.	A small portion of high-value purchases creates a long revenue tail
 
-Sub_Category – Detailed product type.
+ 🛠️ Technologies & Tools Used
 
-Product_ID – Identifier for sold items.
+1.	Python
+2.	pandas, numpy – Data cleaning and manipulation
+3.	matplotlib, seaborn – Visualization
+4.	Plotly – Optional advanced visuals
+5.	Jupyter Notebook – Interactive analysis
+6.	Excel / CSV – Data handling
 
-Quantity – Units purchased.
+ 🔍 Sales Distribution – Key Findings
 
-Price – Selling price per unit.
+1.	Highly right-skewed sales distribution
+2.	70–80% of transactions below ₹4,000
+3.	Sales peak between ₹1,000–₹2,000
+4.	Long tail of premium purchases up to ₹13,000
+5.	Indicates strong price sensitivity among customers
+6.	Suitable for log transformation during modeling
 
-Discount – Discount applied.
+✅ Conclusion
 
-Sales – Total sales value after discount.
+This Retail Ecommerce Sales Analysis transforms raw transactional data into meaningful business insights. 
 
-Profit – Net profit from the sale.
+By studying sales patterns, product performance, customer segmentation, and regional variations, the project highlights the key drivers of revenue and profit.
 
-This structure supports deep analysis of shopping patterns, pricing, profitability, and operational performance.
+The findings reveal strong seasonality, clear differences across product categories, and the significant impact of discount levels on profitability. 
 
-🎯 Project Objectives:
+Customer segmentation insights support targeted marketing and improved customer retention strategies. 
 
-Analyze sales performance across time, regions, and segments.
+Patterns observed through correlations and anomaly detection help businesses refine pricing, manage inventory better, and optimize promotions.
 
-Identify top-selling products and categories.
+Overall, this EDA framework provides a strong foundation for data-driven decision-making. 
 
-Study discount impact on sales and profit.
+With continuous updates, the analysis can evolve into predictive models, dashboards, and automated business intelligence tools—driving long-term growth and competitiveness in the ecommerce sector.
 
-Visualize profit trends and distribution.
-
-Segment customers and understand purchasing patterns.
-
-Explore correlation between price, quantity, profit, and sales.
-
-Detect anomalies, outliers, and unusual behaviors in the dataset.
-
-📊 Key Insights Explored:
-
-Monthly sales fluctuations and seasonal trends.
-
-Product-level contribution to revenue.
-
-Regional differences in profitability.
-
-Impact of discount strategies on profit margins.
-
-Segment-wise buying tendencies.
-
-High-value orders and loss-making scenarios.
-
-Category-wise revenue and profit performance.
-
-🛠️ Technologies & Tools Used:
-
-Python
-
-pandas, numpy – Data cleaning & manipulation
-
-matplotlib, seaborn – Visualization
-
-Jupyter Notebook – Interactive exploration
-
-Excel / CSV – Data handling
-
-Plotly (optional) – Advanced visuals
+Feel free to contribute, suggest improvements, or extend this analysis!

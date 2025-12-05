@@ -5,7 +5,9 @@
 📌 Overview
 
 1.This repository showcases a curated collection of Exploratory Data Analysis (EDA) projects aimed at uncovering insights, patterns, and trends within diverse datasets.
+
 2.Each project follows a systematic analytical workflow that includes data cleaning, transformation, visualization, and interpretation.
+
 3.The goal of this repository is to help learners, analysts, and developers understand how to approach real-world datasets through a logical, structured, and visually driven methodology.
 
 📁 Repository Structure

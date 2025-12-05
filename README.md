@@ -1,3 +1,5 @@
+![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/f08d631dec0fa7acb760f5ea50d310a8fea3614e/Repository%20Cover%20Image.png)
+
 🌟 Exploratory Data Analysis (EDA)
 
 📌 Overview

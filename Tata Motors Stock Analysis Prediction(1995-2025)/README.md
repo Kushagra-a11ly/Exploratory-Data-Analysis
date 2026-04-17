@@ -72,11 +72,11 @@ MA_50 50-day moving average
 
 🚀 Use Cases
 
-📈 Stock price prediction & forecasting
+Stock price prediction & forecasting
 
-📉 Technical analysis & trading strategy backtesting
+Technical analysis & trading strategy backtesting
 
-🤖 Machine learning for financial modeling
+Machine learning for financial modeling
 
-📊 Time-series visualization and analysis
+Time-series visualization and analysis
 

@@ -1,3 +1,9 @@
+![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/48789243202a0a26b9dad8cd49b822d5e4840b38/Tata%20Motors%20Stock%20Analysis%20Prediction(1995-2025)/dataset-cover.png)
+
+
+
+
+
 Tata Motors Stock Price Dataset (1995–2025)
 
 📌 Introduction

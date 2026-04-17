@@ -15,7 +15,7 @@ The repository includes a variety of visual representations, such as:
 6. Distribution Plots – Including histograms and boxplots for price and return distributions
 7. Drawdown and Volatility Graphs – Capturing risk and market fluctuations
 
-What This Repository Does NOT Include
+🚫 What This Repository Does NOT Include
 
 To keep this repository lightweight and focused, the following are intentionally excluded:
 

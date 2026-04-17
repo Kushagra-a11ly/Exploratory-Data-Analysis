@@ -1,22 +1,47 @@
-About Dataset
-This dataset contains historical stock price data for Tata Motors Limited (NSE: TATAMOTORS) from January 1995 to August 2025, pulled from the National Stock Exchange (NSE) of India. It includes daily OHLCV data (Open, High, Low, Close, Volume, Turnover) and several technical indicators, making it suitable for time-series analysis, trading strategy development, and machine learning projects.
+Tata Motors Stock Price Dataset (1995–2025)
+📌 Introduction
 
-Features included:
-Date – Trading day
-Symbol – Stock ticker (TATAMOTORS)
-Open, High, Low, Close – Daily OHLC prices
-PrevClose – Previous day’s closing price
-Volume – Number of shares traded
-Turnover – Total traded value in ₹
-VWAP – Volume Weighted Average Price
-Trades – Number of trades executed
-Daily_Return_% – Daily percentage return
-Cumulative_Return_% – Cumulative return over time
-MA_20 – 20-day moving average of closing price
-MA_50 – 50-day moving average of closing price
+This dataset contains historical stock price data for Tata Motors Limited (NSE: TATAMOTORS) spanning from January 1995 to August 2025. The data is sourced from the National Stock Exchange (NSE) of India and includes detailed daily trading information along with derived technical indicators.
 
-Potential Use Cases:
-Stock price prediction & forecasting
-Technical analysis & backtesting trading strategies
-Machine learning for financial modeling
-Time-series data visualization and analysis
+It is designed for time-series analysis, financial modeling, and machine learning applications.
+
+📂 Table of Contents
+Introduction
+Dataset Overview
+Features
+Use Cases
+Installation
+Usage
+Dependencies
+Examples
+Troubleshooting
+Contributors
+License
+📊 Dataset Overview
+Stock: Tata Motors Limited
+Ticker: TATAMOTORS
+Exchange: NSE (India)
+Time Period: Jan 1995 – Aug 2025
+Frequency: Daily
+🧾 Features
+Feature	Description
+Date	Trading day
+Symbol	Stock ticker (TATAMOTORS)
+Open	Opening price
+High	Highest price of the day
+Low	Lowest price of the day
+Close	Closing price
+PrevClose	Previous day’s closing price
+Volume	Number of shares traded
+Turnover	Total traded value (₹)
+VWAP	Volume Weighted Average Price
+Trades	Number of trades executed
+Daily_Return_%	Daily percentage return
+Cumulative_Return_%	Cumulative return over time
+MA_20	20-day moving average
+MA_50	50-day moving average
+🚀 Use Cases
+📈 Stock price prediction & forecasting
+📉 Technical analysis & trading strategy backtesting
+🤖 Machine learning for financial modeling
+📊 Time-series visualization and analysis

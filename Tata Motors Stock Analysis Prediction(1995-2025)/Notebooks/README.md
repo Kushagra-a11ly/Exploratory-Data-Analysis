@@ -1,8 +1,7 @@
 1. Overview
-
-Historical daily stock market data for Tata Motors Limited listed on NSE India
-Covers 30 years of trading data from 1995 to 2025
-Intended for financial analysis, time-series modelling, and stock price prediction
+1.Historical daily stock market data for Tata Motors Limited listed on NSE India
+2.Covers 30 years of trading data from 1995 to 2025
+3.Intended for financial analysis, time-series modelling, and stock price prediction
 
 
 2. File Details
@@ -57,17 +56,21 @@ Daily Returns: Mostly independent and noisy — low correlation with price or vo
 
 
 6. Derived / Engineered Columns
-These were computed during analysis and are not part of the original raw file:
-
+ 
 Daily_Return_% — Percentage return from the previous trading day's close
+
 MA_20 / MA_50 — Rolling moving averages for trend detection
+
 Cumulative — Compounded return from the first date: (1 + Daily_Return_%/100).cumprod()
+
 Peak — Running maximum of cumulative return to track all-time highs
+
 Drawdown — Deviation from peak, representing loss from the highest point
+
 Month / Year — Datetime features extracted for seasonality analysis
 
 
-7. Suggested Use Cases
+8. Suggested Use Cases
 
 Time-Series Forecasting — Predict future closing prices using ARIMA, LSTM, or Prophet
 Trend Analysis — Study long-term market regimes using moving averages and drawdown patterns

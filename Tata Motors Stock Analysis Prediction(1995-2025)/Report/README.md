@@ -1,8 +1,10 @@
 TATAMOTORS — NSE Stock EDA (1995–2025)
 
-Exploratory Data Analysis of Tata Motors Limited (NSE: TATAMOTORS)**
-30 Years of Market Data | January 1995 – December 2025**
-Confidential — For Internal Research Purposes Only | April 2026**
+Exploratory Data Analysis of Tata Motors Limited (NSE: TATAMOTORS)
+
+30 Years of Market Data | January 1995 – December 2025
+
+Confidential — For Internal Research Purposes Only | April 2026
 
 Overview
 

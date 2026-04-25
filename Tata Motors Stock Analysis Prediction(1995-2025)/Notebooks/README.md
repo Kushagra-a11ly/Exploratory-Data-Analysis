@@ -2,7 +2,7 @@
 1.Historical daily stock market data for Tata Motors Limited listed on NSE India
 2.Covers 30 years of trading data from 1995 to 2025
 3.Intended for financial analysis, time-series modelling, and stock price prediction
-
+ 
 
 2. File Details
 

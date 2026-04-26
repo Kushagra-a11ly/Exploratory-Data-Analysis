@@ -1,90 +1,151 @@
-🛍️ Customer Shopping Behavior Dataset
+# 🛍️ Customer Shopping Behavior Dataset
 
-A structured, transaction-level dataset capturing retail and e-commerce customer behavior — built for exploratory analysis, segmentation, forecasting, and machine learning.
+> A structured, transaction-level dataset capturing retail and e-commerce customer behavior —
+> built for exploratory analysis, segmentation, forecasting, and machine learning.
 
-Table of Contents
+![Dataset Type](https://img.shields.io/badge/Type-Tabular-blue)
+![Domain](https://img.shields.io/badge/Domain-Retail%20%26%20E--Commerce-orange)
+![Level](https://img.shields.io/badge/Granularity-Transaction--Level-green)
+![Format](https://img.shields.io/badge/Format-CSV-lightgrey)
 
-Overview
-Objectives
-Dataset Structure
-Feature Reference
-Use Cases
-Getting Started
-Notes & Considerations
+---
 
+## 📑 Table of Contents
 
-Overview
-This dataset provides a comprehensive view of customer shopping behavior across retail and e-commerce channels. Each row represents a single customer transaction, combining demographic attributes with detailed purchase and behavioral data.
+- [Overview](#-overview)
+- [Objectives](#-objectives)
+- [Dataset Structure](#-dataset-structure)
+- [Feature Reference](#-feature-reference)
+- [Use Cases](#-use-cases)
+- [Getting Started](#-getting-started)
+- [Notes & Considerations](#-notes--considerations)
+- [License](#-license)
+
+---
+
+## 📌 Overview
+
+This dataset provides a comprehensive view of customer shopping behavior across retail and e-commerce channels.
+Each row represents a **single customer transaction**, combining demographic attributes with detailed purchase and behavioral data.
+
 It is designed to support data-driven decision-making in areas such as:
 
-Marketing optimization
-Customer segmentation
-Demand forecasting
-Business intelligence
+- 📣 Marketing optimization
+- 👥 Customer segmentation
+- 📦 Demand forecasting
+- 📊 Business intelligence
 
+---
 
-Objectives
-#Goal1Understand customer purchasing behavior across demographics2Identify trends in age, gender, and geographic segments3Analyze the impact of discounts and promotional strategies4Evaluate seasonal effects on sales volume and spend5Study payment preferences and transaction patterns6Support predictive modeling and recommendation systems
+## 🎯 Objectives
 
-Dataset Structure
-Type        : Structured (Tabular)
-Granularity : Transaction-level
-Variables   : Mix of categorical and numerical features
-Format      : CSV / Tabular
+| # | Goal |
+|---|------|
+| 1 | Understand customer purchasing behavior across demographics |
+| 2 | Identify trends in age, gender, and geographic segments |
+| 3 | Analyze the impact of discounts and promotional strategies |
+| 4 | Evaluate seasonal effects on sales volume and spend |
+| 5 | Study payment preferences and transaction patterns |
+| 6 | Support predictive modeling and recommendation systems |
+
+---
+
+## 🗂️ Dataset Structure
+
+```
+Type          : Structured (Tabular)
+Granularity   : Transaction-level
+Variables     : Mix of categorical and numerical features
+Format        : CSV / Tabular
+```
+
 The dataset combines four categories of information:
 
-Customer Demographics — Who is buying
-Product Information — What is being bought
-Transaction Details — How and when it was purchased
-Behavioral Indicators — Purchase frequency, loyalty signals, and preferences
+| Category | Description |
+|----------|-------------|
+| **Customer Demographics** | Who is buying |
+| **Product Information** | What is being bought |
+| **Transaction Details** | How and when it was purchased |
+| **Behavioral Indicators** | Purchase frequency, loyalty signals, and preferences |
 
+---
 
-Feature Reference
-ColumnTypeDescriptionCustomer IDCategoricalUnique identifier for each customerAgeNumericalCustomer age in yearsGenderCategoricalCustomer gender (Male / Female)Item PurchasedCategoricalName of the specific product purchasedCategoryCategoricalProduct category (e.g., Clothing, Accessories, Footwear)Purchase Amount (USD)NumericalTotal transaction value in US dollarsLocationCategoricalCustomer's geographic region or stateSizeCategoricalItem size (S, M, L, XL, etc.)ColorCategoricalColor of the purchased productSeasonCategoricalSeason of purchase (Spring, Summer, Fall, Winter)Review RatingNumericalCustomer product rating (1–5 scale)Subscription StatusCategoricalWhether the customer has an active subscription (Yes / No)Payment MethodCategoricalPayment method used in this transactionShipping TypeCategoricalDelivery option selected (Standard, Express, etc.)Discount AppliedCategoricalWhether a discount was applied (Yes / No)Promo Code UsedCategoricalWhether a promo code was used (Yes / No)Previous PurchasesNumericalTotal number of prior purchases by the customerPreferred Payment MethodCategoricalCustomer's habitual payment preferenceFrequency of PurchasesCategoricalPurchase cadence (Weekly, Monthly, Annually, etc.)
+## 📋 Feature Reference
 
-Note: Payment Method and Preferred Payment Method are distinct fields.
-The former reflects what was used in a specific transaction; the latter reflects the customer's stated or historical preference.
+| Column | Type | Description |
+|--------|------|-------------|
+| `Customer ID` | Categorical | Unique identifier for each customer |
+| `Age` | Numerical | Customer age in years |
+| `Gender` | Categorical | Customer gender (Male / Female) |
+| `Item Purchased` | Categorical | Name of the specific product purchased |
+| `Category` | Categorical | Product category (e.g., Clothing, Accessories, Footwear) |
+| `Purchase Amount (USD)` | Numerical | Total transaction value in US dollars |
+| `Location` | Categorical | Customer's geographic region or state |
+| `Size` | Categorical | Item size (S, M, L, XL, etc.) |
+| `Color` | Categorical | Color of the purchased product |
+| `Season` | Categorical | Season of purchase (Spring, Summer, Fall, Winter) |
+| `Review Rating` | Numerical | Customer product rating (1–5 scale) |
+| `Subscription Status` | Categorical | Whether the customer has an active subscription (Yes / No) |
+| `Payment Method` | Categorical | Payment method used in this specific transaction |
+| `Shipping Type` | Categorical | Delivery option selected (Standard, Express, etc.) |
+| `Discount Applied` | Categorical | Whether a discount was applied (Yes / No) |
+| `Promo Code Used` | Categorical | Whether a promo code was used (Yes / No) |
+| `Previous Purchases` | Numerical | Total number of prior purchases by the customer |
+| `Preferred Payment Method` | Categorical | Customer's habitual payment preference |
+| `Frequency of Purchases` | Categorical | Purchase cadence (Weekly, Monthly, Annually, etc.) |
 
+> ⚠️ **Note:** `Payment Method` and `Preferred Payment Method` are distinct fields.
+> The former reflects what was used in a specific transaction; the latter reflects the customer's stated or historical preference.
 
-Use Cases
-Exploratory Data Analysis (EDA)
+---
 
-Visualize spending trends across age groups, genders, and regions
-Identify seasonal purchase spikes and category performance
-Analyze product popularity and review rating distributions
+## 💡 Use Cases
 
-Customer Segmentation
+### 📈 Exploratory Data Analysis (EDA)
+- Visualize spending trends across age groups, genders, and regions
+- Identify seasonal purchase spikes and category performance
+- Analyze product popularity and review rating distributions
 
-Cluster customers by purchase frequency, spend, and loyalty indicators
-Identify high-value customers and at-risk churners
-Build targeted campaigns for distinct behavioral groups
+### 👥 Customer Segmentation
+- Cluster customers by purchase frequency, spend, and loyalty indicators
+- Identify high-value customers and at-risk churners
+- Build targeted campaigns for distinct behavioral groups
 
-Revenue & Sales Analysis
+### 💰 Revenue & Sales Analysis
+- Measure the uplift from discounts and promo codes
+- Calculate average order value (AOV) across segments
+- Benchmark performance by location, category, or season
 
-Measure the uplift from discounts and promo codes
-Calculate average order value (AOV) across segments
-Benchmark performance by location, category, or season
+### 🤖 Predictive Modeling
+- Build churn prediction or lifetime value (LTV) models
+- Develop product recommendation systems
+- Forecast demand by category and season
 
-Predictive Modeling
+---
 
-Build churn prediction or lifetime value (LTV) models
-Develop product recommendation systems
-Forecast demand by category and season
+## 🚀 Getting Started
 
+### 1. Load the Dataset
 
-Getting Started
-1. Load the Dataset
-Python
-pythonimport pandas as pd
+**Python**
+```python
+import pandas as pd
 
 df = pd.read_csv("shopping_behavior.csv")
 print(df.shape)
 df.head()
-R
-rdf <- read.csv("shopping_behavior.csv")
+```
+
+**R**
+```r
+df <- read.csv("shopping_behavior.csv")
 head(df)
-2. Initial Exploration
-python# Summary statistics
+```
+
+### 2. Initial Exploration
+
+```python
+# Summary statistics
 df.describe(include="all")
 
 # Missing value audit
@@ -93,23 +154,36 @@ df.isnull().sum()
 # Distribution of key columns
 df["Category"].value_counts()
 df["Purchase Amount (USD)"].hist(bins=30)
-3. Preprocessing Checklist
+```
 
- Encode categorical variables (Label Encoding or One-Hot Encoding)
- Normalize/scale numerical features for ML pipelines
- Handle missing or inconsistent values
- Verify distinction between Payment Method and Preferred Payment Method
- Parse or bin Age and Frequency of Purchases as needed
+### 3. Preprocessing Checklist
 
+- [ ] Encode categorical variables (Label Encoding or One-Hot Encoding)
+- [ ] Normalize / scale numerical features for ML pipelines
+- [ ] Handle missing or inconsistent values
+- [ ] Verify distinction between `Payment Method` and `Preferred Payment Method`
+- [ ] Parse or bin `Age` and `Frequency of Purchases` as needed
 
-Notes & Considerations
+---
 
-Categorical Encoding — Most columns are categorical and will require encoding before use in machine learning models.
-Duplicate Detection — Verify that Customer ID entries are unique per transaction vs. per customer to avoid miscounting.
-Feature Leakage — Take care when using behavioral fields (e.g., Previous Purchases) in predictive models to avoid data leakage.
-Scalability — The dataset structure is designed to scale; performance-sensitive operations should account for dataset size.
-Privacy — While the dataset does not contain PII beyond anonymized IDs, handle it in compliance with applicable data privacy regulations.
+## ⚠️ Notes & Considerations
 
+| Topic | Detail |
+|-------|--------|
+| **Categorical Encoding** | Most columns are categorical and require encoding before use in ML models |
+| **Duplicate Detection** | Verify that `Customer ID` entries are unique per transaction vs. per customer |
+| **Feature Leakage** | Use behavioral fields like `Previous Purchases` carefully in predictive models |
+| **Scalability** | Structure supports scaling; account for dataset size in performance-sensitive operations |
+| **Privacy** | No PII beyond anonymized IDs — handle in compliance with applicable data privacy regulations |
 
-License
-Specify the applicable license here (e.g., MIT, CC BY 4.0, or proprietary).
+---
+
+## 📄 License
+
+Specify the applicable license here (e.g., `MIT`, `CC BY 4.0`, or `Proprietary`).
+
+---
+
+<p align="center">
+  Made with ❤️ for data-driven retail analytics
+</p>

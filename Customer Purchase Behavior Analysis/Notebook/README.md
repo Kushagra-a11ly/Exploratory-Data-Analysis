@@ -1,1 +1,0 @@
-[img_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ea05664808e0db457c68ad1250eb7a1987c43d11/Customer%20Purchase%20Behavior%20Analysis/Notebook/ffe44bd9f708e9ca88ea3341dbcd8b22.jpg)

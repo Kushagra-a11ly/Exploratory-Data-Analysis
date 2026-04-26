@@ -1,4 +1,4 @@
-🛒 Customer Purchase Behaviour — Exploratory Data Analysis
+Customer Purchase Behaviour — Exploratory Data Analysis
 
 A comprehensive EDA of 3,900 customer transactions across 4 product categories, 6 payment methods, and 50 U.S. states.
 

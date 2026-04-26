@@ -33,3 +33,29 @@ ML for Return Prediction — Use OHLCV, VWAP, trade counts, and moving averages 
 Volatility & Risk Analysis — Compute rolling volatility, historical VaR, CVaR, maximum drawdown profiles, and Sharpe/Sortino ratios across multiple investment horizons.
 Exploratory Data Analysis — Analyse price trends, volume seasonality, return distributions, autocorrelation structure, and long-run performance attribution.
 Academic & Financial Research — Supports event studies, emerging market equity research, microstructure-to-price-outcome analysis, and long-run return attribution in the Indian market context.
+
+
+6. Getting Started
+Prerequisites
+bashpip install pandas matplotlib
+Load & Explore
+pythonimport pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv('tatamotors_historical.csv', parse_dates=['Date'])
+df.set_index('Date', inplace=True)
+
+# Quick overview
+print(df.shape)       # (~7500, 13)
+print(df.head())
+print(df.describe())
+Plot Closing Price with Moving Averages
+pythonfig, ax = plt.subplots(figsize=(14, 5))
+ax.plot(df['Close'], label='Close', linewidth=0.9)
+ax.plot(df['MA_20'], label='MA 20', linewidth=1.2)
+ax.plot(df['MA_50'], label='MA 50', linewidth=1.2)
+ax.legend()
+ax.set_title('TATAMOTORS — Daily Close with Moving Averages (1995–2025)')
+plt.tight_layout()
+plt.show()

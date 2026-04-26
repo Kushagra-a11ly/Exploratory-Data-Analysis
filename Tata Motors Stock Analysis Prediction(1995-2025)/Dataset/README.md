@@ -29,9 +29,9 @@ Tata Motors Stock Price Dataset (1995–2025)
 
 ---
 
-## 4. Feature Reference
+## 3. Feature Reference
 
-### 4.1 Market Price Data
+### 3.1 Market Price Data
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -43,7 +43,7 @@ Tata Motors Stock Price Dataset (1995–2025)
 | `Close` | Float (₹) | Official NSE closing price at end of session. |
 | `PrevClose` | Float (₹) | Prior session's closing price; basis for return calculation. |
 
-### 4.2 Volume & Market Microstructure
+### 3.2 Volume & Market Microstructure
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -52,7 +52,7 @@ Tata Motors Stock Price Dataset (1995–2025)
 | `VWAP` | Float (₹) | Volume Weighted Average Price — total turnover ÷ total volume. Standard institutional execution benchmark. |
 | `Trades` | Integer | Number of discrete order matches in the session. Proxy for market depth beyond raw volume. |
 
-### 4.3 Derived & Technical Features
+### 3.3 Derived & Technical Features
 
 | Column | Type | Description |
 |--------|------|-------------|
@@ -63,7 +63,7 @@ Tata Motors Stock Price Dataset (1995–2025)
 
 ---
 
-## 5. Use Cases
+## 4. Use Cases
 
 - **Time-Series Forecasting** — Train ARIMA, SARIMA, LSTM, GRU, or Temporal Fusion Transformer models on 30 years of daily close data spanning structurally distinct market regimes.
 - **Algorithmic Strategy Backtesting** — Backtest moving average crossover systems, momentum strategies, mean-reversion signals, and volume-confirmation filters against authentic exchange-sourced history.
@@ -74,7 +74,7 @@ Tata Motors Stock Price Dataset (1995–2025)
 
 ---
 
-## 6. Getting Started
+## 5. Getting Started
 
 ### Prerequisites
 

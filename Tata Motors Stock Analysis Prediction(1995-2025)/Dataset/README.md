@@ -8,9 +8,9 @@ Tata Motors Stock Price Dataset (1995–2025)
 
 ## 1. Introduction
 
-## 1. This dataset contains historical stock price data for Tata Motors Limited (NSE: TATAMOTORS) spanning from January 1995 to August 2025.
-## 2. The data is sourced from the National Stock Exchange (NSE) of India and includes detailed daily trading information along with derived technical indicators.
-## 3. It is designed for time-series analysis, financial modeling, and machine learning applications.
+1. This dataset contains historical stock price data for Tata Motors Limited (NSE: TATAMOTORS) spanning from January 1995 to August 2025.
+2. The data is sourced from the National Stock Exchange (NSE) of India and includes detailed daily trading information along with derived technical indicators.
+3. It is designed for time-series analysis, financial modeling, and machine learning applications.
 
 
 ## 2. Dataset Composition

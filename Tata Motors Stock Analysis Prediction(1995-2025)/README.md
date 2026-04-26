@@ -1,66 +1,125 @@
 ![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/48789243202a0a26b9dad8cd49b822d5e4840b38/Tata%20Motors%20Stock%20Analysis%20Prediction(1995-2025)/dataset-cover.png)
 
-Tata Motors Limited — Historical Daily Stock Price Dataset
-NSE: TATAMOTORS  |  January 1995 – August 2025
-Show Image
-Show Image
-Show Image
-Show Image
-Show Image
+# Tata Motors Limited — Historical Daily Stock Price Dataset
 
-Table of Contents
+**Exchange:** NSE India &nbsp;|&nbsp; **Ticker:** TATAMOTORS &nbsp;|&nbsp; **Period:** January 1995 – August 2025 &nbsp;|&nbsp; **Format:** CSV &nbsp;|&nbsp; **License:** CDLA-Permissive-2.0
 
-Overview
-About Tata Motors
-Dataset Composition
-Feature Reference
-Use Cases
-Getting Started
-Notes & Considerations
-License
+---
 
+## Table of Contents
 
-Overview
-For over three decades, Tata Motors Limited has stood as one of the most closely watched equities on the National Stock Exchange of India — a bellwether for the country's automotive sector, a barometer of domestic consumption, and a stock that has moved markets with every strategic decision from the landmark acquisition of Jaguar Land Rover in 2008 to its ongoing transformation into an electric vehicle powerhouse.
-This dataset captures that entire journey.
-Compiled from official NSE records and spanning January 1995 through August 2025, this is a longitudinal daily price history containing over 7,500 trading sessions of OHLCV data, market microstructure metrics, and pre-computed technical indicators — cleaned, enriched, and structured for immediate use in quantitative research, financial modelling, and machine learning applications.
+1. [Overview](#1-overview)
+2. [About Tata Motors](#2-about-tata-motors)
+3. [Dataset Composition](#3-dataset-composition)
+4. [Feature Reference](#4-feature-reference)
+5. [Use Cases](#5-use-cases)
+6. [Getting Started](#6-getting-started)
+7. [Notes & Considerations](#7-notes--considerations)
+8. [License](#8-license)
 
-About Tata Motors
-Tata Motors Limited is the automotive flagship of the Tata Group, one of India's oldest and most diversified industrial conglomerates. Headquartered in Mumbai, the company manufactures a broad portfolio spanning passenger vehicles, commercial trucks, electric vehicles, and premium automotive brands through its wholly-owned subsidiary, Jaguar Land Rover.
-As a constituent of the NIFTY 50 index, TATAMOTORS is among the most liquid and institutionally traded equities on the NSE, making its price history both historically rich and analytically valuable.
-The stock's 30-year trading record encompasses some of the most consequential moments in modern Indian financial history:
-PeriodEventLate 1990sPost-liberalisation bull market2000–2001Dot-com correction2008Global financial crisis & JLR acquisition2011–2016JLR debt cycle2020–2021COVID-19 pandemic shock and recovery2022–2025EV structural re-rating & JLR return to profitability
-Each of these episodes is legible in the data.
+---
 
-Dataset Composition
-AttributeDetailExchangeNational Stock Exchange of India (NSE)Ticker SymbolTATAMOTORSAsset ClassEquity — Large Cap / NIFTY 50 ConstituentData FrequencyDaily (per trading session)Coverage PeriodJanuary 1995 – August 2025Approximate Row Count~7,500 trading sessionsTotal Feature Columns14Missing ValuesNone (post-cleaning)File FormatCSV (UTF-8 encoded)
+## 1. Overview
 
-Feature Reference
-Market Price Data
-ColumnDescriptionDateCalendar date of the trading session, aligned to NSE market holidays. Format: YYYY-MM-DD.SymbolNSE ticker identifier. Consistently recorded as TATAMOTORS throughout the full dataset.OpenPrice at which the first executed trade occurred at session open, in Indian Rupees (₹).HighHighest traded price recorded during the session, in ₹.LowLowest traded price recorded during the session, in ₹.CloseOfficial NSE-published closing price at end of session, in ₹.PrevCloseClosing price from the immediately preceding trading session. Used as the basis for daily return calculation.
-Volume & Market Microstructure
-ColumnDescriptionVolumeTotal number of equity shares traded during the session. A key measure of market participation and liquidity.TurnoverAggregate monetary value of all trades executed during the session, denominated in ₹. Reflects total capital flow through the stock on a given day.VWAPVolume Weighted Average Price — calculated as total turnover divided by total volume. Widely used as a benchmark in institutional order execution.TradesNumber of discrete order matches executed during the session. Serves as a proxy for depth of market participation beyond raw volume.
-Derived & Technical Features
-ColumnDescriptionDaily_Return_%Single-session percentage return, computed as the percentage change from PrevClose to Close. Represents the raw daily return for a buy-and-hold position.Cumulative_Return_%Running compounded return indexed from the first record in the dataset. Provides a continuous performance trajectory across the full 30-year span.MA_2020-session simple moving average of the daily closing price. A standard short-term trend indicator for momentum and dynamic support/resistance analysis.MA_5050-session simple moving average of the daily closing price. Represents the medium-term price trend, widely used in crossover-based trading systems.
+- Compiled from **official NSE records**, covering every trading session from **January 1995 to August 2025**.
+- Contains over **7,500 daily trading sessions** of OHLCV data, microstructure metrics, and pre-computed technical indicators.
+- Data is **fully cleaned and enriched** — no missing values, no imputed or synthetic entries.
+- Structured for immediate use in **quantitative research, financial modelling, and machine learning** workflows.
+- Captures 30 years of market history including bull markets, financial crises, corporate restructuring cycles, and the ongoing EV transition.
 
-Use Cases
-This dataset is designed to support a wide spectrum of quantitative and applied research workflows.
-📉 Time-Series Forecasting
-Train and evaluate autoregressive models (ARIMA, SARIMA), deep learning architectures (LSTM, GRU, Temporal Fusion Transformer), and modern sequence models on 30 years of daily close data. The breadth of the series ensures exposure to structurally distinct market regimes, stress-testing model generalisability across bull markets, crashes, and recovery cycles.
-⚙️ Algorithmic Strategy Backtesting
-Design and backtest rule-based trading strategies — including moving average crossover systems, momentum strategies, mean-reversion signals, and volume-confirmation filters — against authentic, exchange-sourced price history spanning three full decades.
-🤖 Machine Learning for Return Prediction
-Use OHLCV data, VWAP, trade counts, daily returns, and moving averages as direct model features or inputs to richer feature engineering pipelines for classification models targeting directional price movement or regression models targeting forward returns and volatility.
-📊 Volatility & Risk Analysis
-Compute rolling volatility measures, historical Value-at-Risk (VaR), Conditional VaR (CVaR), maximum drawdown profiles, and Sharpe/Sortino ratios across different investment horizons and market regimes supported by the full length of the series.
-🔍 Exploratory Data Analysis & Visualisation
-Conduct price trend analysis, volume seasonality studies, return distribution modelling, autocorrelation structure analysis, and long-run performance attribution using the full breadth of included features.
-🎓 Financial & Academic Research
-Suitable for event studies around corporate announcements, sector-level research in emerging market equities, analysis of the relationship between market microstructure metrics and price outcomes, and long-run equity performance attribution within the Indian market context.
+---
 
-Getting Started
-Load the dataset and begin exploration with the following snippet:
-pythonimport pandas as pd
+## 2. About Tata Motors
+
+- **Tata Motors Limited** is the automotive flagship of the Tata Group — one of India's oldest and most diversified industrial conglomerates.
+- Headquartered in **Mumbai**, with a product portfolio spanning passenger vehicles, commercial trucks, electric vehicles, and premium brands via its subsidiary **Jaguar Land Rover (JLR)**.
+- A constituent of the **NIFTY 50** index, making it one of the most liquid and institutionally traded equities on the NSE.
+- The 30-year price history in this dataset covers all major market-moving events:
+
+  | Period | Event |
+  |--------|-------|
+  | Late 1990s | Post-liberalisation bull market |
+  | 2000–2001 | Dot-com correction |
+  | 2008 | Global financial crisis & JLR acquisition |
+  | 2011–2016 | JLR-linked debt cycle |
+  | 2020–2021 | COVID-19 shock and recovery |
+  | 2022–2025 | EV re-rating & JLR return to profitability |
+
+---
+
+## 3. Dataset Composition
+
+| Attribute | Detail |
+|-----------|--------|
+| Exchange | National Stock Exchange of India (NSE) |
+| Ticker Symbol | TATAMOTORS |
+| Asset Class | Equity — Large Cap / NIFTY 50 Constituent |
+| Data Frequency | Daily (per trading session) |
+| Coverage Period | January 1995 – August 2025 |
+| Approximate Row Count | ~7,500 trading sessions |
+| Total Feature Columns | 14 |
+| Missing Values | None (post-cleaning) |
+| File Format | CSV (UTF-8 encoded) |
+
+---
+
+## 4. Feature Reference
+
+### 4.1 Market Price Data
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `Date` | Date | Trading session date aligned to NSE market calendar. Format: `YYYY-MM-DD`. |
+| `Symbol` | String | NSE ticker — consistently `TATAMOTORS` across all rows. |
+| `Open` | Float (₹) | First executed trade price at session open. |
+| `High` | Float (₹) | Highest traded price during the session. |
+| `Low` | Float (₹) | Lowest traded price during the session. |
+| `Close` | Float (₹) | Official NSE closing price at end of session. |
+| `PrevClose` | Float (₹) | Prior session's closing price; basis for return calculation. |
+
+### 4.2 Volume & Market Microstructure
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `Volume` | Integer | Total shares traded during the session. Measures liquidity and participation. |
+| `Turnover` | Float (₹) | Aggregate monetary value of all trades executed during the session. |
+| `VWAP` | Float (₹) | Volume Weighted Average Price — total turnover ÷ total volume. Standard institutional execution benchmark. |
+| `Trades` | Integer | Number of discrete order matches in the session. Proxy for market depth beyond raw volume. |
+
+### 4.3 Derived & Technical Features
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `Daily_Return_%` | Float | Session return: percentage change from `PrevClose` to `Close`. |
+| `Cumulative_Return_%` | Float | Running compounded return indexed from the first record in the dataset. |
+| `MA_20` | Float (₹) | 20-session simple moving average of `Close`. Short-term trend and momentum indicator. |
+| `MA_50` | Float (₹) | 50-session simple moving average of `Close`. Medium-term trend; used in crossover systems. |
+
+---
+
+## 5. Use Cases
+
+- **Time-Series Forecasting** — Train ARIMA, SARIMA, LSTM, GRU, or Temporal Fusion Transformer models on 30 years of daily close data spanning structurally distinct market regimes.
+- **Algorithmic Strategy Backtesting** — Backtest moving average crossover systems, momentum strategies, mean-reversion signals, and volume-confirmation filters against authentic exchange-sourced history.
+- **ML for Return Prediction** — Use OHLCV, VWAP, trade counts, and moving averages as raw features or inputs to custom feature engineering pipelines for directional or return-magnitude models.
+- **Volatility & Risk Analysis** — Compute rolling volatility, historical VaR, CVaR, maximum drawdown profiles, and Sharpe/Sortino ratios across multiple investment horizons.
+- **Exploratory Data Analysis** — Analyse price trends, volume seasonality, return distributions, autocorrelation structure, and long-run performance attribution.
+- **Academic & Financial Research** — Supports event studies, emerging market equity research, microstructure-to-price-outcome analysis, and long-run return attribution in the Indian market context.
+
+---
+
+## 6. Getting Started
+
+### Prerequisites
+
+```bash
+pip install pandas matplotlib
+```
+
+### Load & Explore
+
+```python
+import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset
@@ -71,35 +130,38 @@ df.set_index('Date', inplace=True)
 print(df.shape)       # (~7500, 13)
 print(df.head())
 print(df.describe())
+```
 
-# Plot closing price with moving averages
+### Plot Closing Price with Moving Averages
+
+```python
 fig, ax = plt.subplots(figsize=(14, 5))
-ax.plot(df['Close'],  label='Close',  linewidth=0.9)
-ax.plot(df['MA_20'],  label='MA 20',  linewidth=1.2)
-ax.plot(df['MA_50'],  label='MA 50',  linewidth=1.2)
+ax.plot(df['Close'], label='Close', linewidth=0.9)
+ax.plot(df['MA_20'], label='MA 20', linewidth=1.2)
+ax.plot(df['MA_50'], label='MA 50', linewidth=1.2)
 ax.legend()
-plt.title('TATAMOTORS — Daily Close with Moving Averages (1995–2025)')
+ax.set_title('TATAMOTORS — Daily Close with Moving Averages (1995–2025)')
 plt.tight_layout()
 plt.show()
+```
 
-Notes & Considerations
+---
 
-Moving Average Warm-Up Removal
-The first 50 rows of raw data, in which MA_20 and MA_50 carry NaN values owing to their respective look-back window requirements, have been excluded from the final dataset. All retained rows are fully populated across every column with no leading missing values.
+## 7. Notes & Considerations
 
+- **Moving Average Warm-Up Removed** — The first 50 rows (where `MA_20` and `MA_50` carry `NaN` values due to their look-back window requirements) have been excluded. All retained rows are fully populated across every column.
+- **No Imputation Applied** — Price, volume, and turnover columns reflect official NSE-published figures without any imputation, interpolation, or forward-filling. No synthetic or estimated values are present.
+- **Return Calculation Basis** — `Daily_Return_%` and `Cumulative_Return_%` are derived directly from NSE-recorded `Close` and `PrevClose` values. No adjustments for dividends, bonus issues, or rights entitlements have been applied beyond what is already reflected in official NSE records.
+- **Corporate Action Advisory** — Users constructing long-run return series or comparing absolute price levels across distant periods should independently verify the full corporate action history of TATAMOTORS (splits, bonuses, rights issues) to ensure price-level continuity where required by their methodology.
+- **Market Calendar Alignment** — Dates are aligned to the NSE trading calendar. Weekends, public holidays, and exchange-declared market closures are excluded from the dataset.
 
-No Imputation Applied
-Price, volume, and turnover columns reflect official NSE-published figures without any imputation, interpolation, or forward-filling. The data is presented exactly as recorded. There are no synthetic or estimated values in the dataset.
+---
 
+## 8. License
 
-Return Calculation Basis
-Daily_Return_% and Cumulative_Return_% have been derived directly from NSE-recorded Close and PrevClose values. No adjustment for dividends, bonus issues, rights entitlements, or stock splits has been applied beyond what is already reflected in the NSE's official historical records.
+This dataset is released under the **[Community Data License Agreement (CDLA) — Permissive, Version 2.0](https://cdla.dev/permissive-2-0/)**.
 
-
-Corporate Action Advisory
-Users constructing long-run return series or comparing absolute price levels across distant time periods should independently verify and account for the full history of corporate actions affecting TATAMOTORS — including stock splits, bonus share issuances, and rights issues — to ensure price continuity where required by their specific methodology.
-
-
-License
-This dataset is made available under the Community Data License Agreement (CDLA) — Permissive, Version 2.0 for open use in research, education, and non-commercial applications. Users are free to use, modify, and redistribute with attribution.
-Data sourced from the National Stock Exchange of India (NSE). All rights in original exchange data remain with NSE.
+- Free to use for research, education, and non-commercial applications.
+- Modification and redistribution permitted with attribution.
+- Data sourced from the **National Stock Exchange of India (NSE)**.
+- All rights in the original exchange data remain with NSE.

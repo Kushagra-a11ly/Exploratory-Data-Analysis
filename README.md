@@ -71,4 +71,4 @@
 
 ---
 
-*All projects in this repository are intended for educational and portfolio purposes. Datasets are used solely for analytical demonstration.*
+*This repository focuses on Exploratory Data Analysis (EDA) projects built for learning, research, and portfolio development. All datasets are used solely for analytical and demonstration purposes.*

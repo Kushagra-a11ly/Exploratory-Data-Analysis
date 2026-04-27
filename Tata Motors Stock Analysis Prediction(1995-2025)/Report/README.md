@@ -141,7 +141,7 @@
 
 **Chart:** Histogram with KDE (`sns.histplot`)
 
-![Closing Price Distribution](images/01_closing_price_distribution.png)
+(img_alt)![Closing Price Distribution](images/01_closing_price_distribution.png)
 
 **Key Insights:**
 - Multi-modal distribution with distinct peaks at ₹150–250, ₹350–500, and ₹900–1,050 — each represents a separate market regime across the 30-year history.

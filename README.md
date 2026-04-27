@@ -71,4 +71,5 @@
 
 ---
 
-*This repository focuses on Exploratory Data Analysis (EDA) projects built for learning, research, and portfolio development. All datasets are used solely for analytical and demonstration purposes.*
+*This repository focuses on Exploratory Data Analysis (EDA) projects built for learning, research, and portfolio development.* 
+*All datasets are used solely for analytical and demonstration purposes.*

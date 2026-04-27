@@ -1,12 +1,5 @@
 # Tata Motors Limited — Stock Analysis & Prediction (1995–2025)
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
-![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0)
-![License](https://img.shields.io/badge/License-CDLA--Permissive--2.0-green)
-![Exchange](https://img.shields.io/badge/Exchange-NSE%20India-orange)
-![Coverage](https://img.shields.io/badge/Coverage-1995–2025-informational)
-![Sessions](https://img.shields.io/badge/Trading%20Sessions-~7%2C500-lightgrey)
 
 > **Exploratory Data Analysis (EDA)** on 30 years of daily stock data for Tata Motors Limited (NSE: TATAMOTORS) — covering price structure, volume behavior, return seasonality, market microstructure, and drawdown risk across ~7,500 trading sessions.
 

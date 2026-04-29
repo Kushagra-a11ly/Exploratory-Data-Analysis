@@ -344,4 +344,3 @@ This project is released under the [MIT License](LICENSE).
 
 ---
 
-> *"The dataset's near-perfect feature independence and balanced sampling make it an ideal sandbox for benchmarking non-linear models — but real-world deployment will require richer, noisier data to build truly generalisable pricing models."*

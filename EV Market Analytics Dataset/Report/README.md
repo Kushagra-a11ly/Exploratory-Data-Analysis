@@ -1,5 +1,15 @@
 # ⚡ EV Market Analytics
 
+
+### Comprehensive Exploratory Data Analysis of the Global Electric Vehicle Market
+
+
+*Analysing 20+ brands · 4 market segments · 10 visualizations · 2020–2026 sales trends*
+
+</div>
+
+
+
 ---
 
 ## 📖 Table of Contents

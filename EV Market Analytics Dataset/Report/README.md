@@ -1,18 +1,4 @@
-<div align="center">
-
 # ⚡ EV Market Analytics
-
-### Comprehensive Exploratory Data Analysis of the Global Electric Vehicle Market
-
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![Seaborn](https://img.shields.io/badge/Seaborn-0.13%2B-4C8CBF?style=flat-square)](https://seaborn.pydata.org)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8%2B-11557C?style=flat-square)](https://matplotlib.org)
-[![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)](LICENSE)
-
-*Analysing 20+ brands · 4 market segments · 10 visualizations · 2020–2026 sales trends*
-
-</div>
 
 ---
 

@@ -55,26 +55,31 @@ The goal is to surface actionable commercial insights and identify the true driv
 The report covers **10 visual analyses** across 5 analytical themes:
 
 1️⃣ Revenue by Category
+![image alt]()
 - Clothing dominates at over $100,000 — more than the other three categories combined
 - Accessories is a reliable secondary engine at ~$74,000
 - Outerwear is the chronic underperformer at ~$19,000, even in winter
 
 2️⃣ Spending Behaviour by Gender
+![image alt]()
 - Male and female customers show **identical median spend (~$60)**
 - IQR is the same for both genders ($40–$80)
 - Gender has **no predictive power** over purchase amount
 
 ### 3️⃣ Age vs. Spending Trend
+![image alt]()
 - Regression line is **virtually flat at ~$60** across all ages (r ≈ -0.01)
 - Every age cohort (18–70) spends within the same $20–$100 band
 - Highest customer density in the **25–45 age band**
 
 ### 4️⃣ Effect of Discount on Purchase Amount
+![image alt]()
 - Discounted customers spend **~$59 vs. ~$60** without discount — negligible $1 difference
 - Discounts are **not lifting basket size**; tight error bars confirm this is statistically stable
 - Potential pure margin erosion with no incremental revenue gain
 
 ### 5️⃣ Seasonal Revenue Heatmap
+![image alt]()
 
 | Category | Fall | Spring | Summer | Winter |
 |----------|------|--------|--------|--------|
@@ -87,22 +92,26 @@ The report covers **10 visual analyses** across 5 analytical themes:
 - **Outerwear** fails to peak even in winter — fundamental visibility or product problem
 
 ### 6️⃣ Size Distribution Across Categories
+![image alt]()
 - **Medium (M)** is the top size in every category without exception
 - **Outerwear** has critically low stock across all sizes (XL barely ~30 units)
 - **Clothing**: Large over-stocked vs. Small — potential lost sales risk
 - **Accessories**: Healthiest size balance across all categories
 
 ### 7️⃣ Revenue by Top Locations
+![image alt]()
 - Revenue spans only **~$600** across the top 10 states (<11% spread)
 - **Montana leads** despite being one of the least populous states — a sampling artefact
 - **New York** appears mid-table — anomalous for the largest U.S. consumer market
 
 ### 8️⃣ Payment Method Distribution
+![image alt]()
 - **Credit Card** leads marginally at ~697 transactions (~17.8%)
 - All other 5 methods cluster within a **20-count band** of each other
 - Implausibly uniform — another synthetic data fingerprint
 
 ### 9️⃣ Correlation Matrix
+![image alt]()
 
 | Variable Pair | r | Interpretation |
 |---------------|---|----------------|
@@ -115,6 +124,7 @@ The report covers **10 visual analyses** across 5 analytical themes:
 > ⚠️ All off-diagonal correlations fall within **-0.04 to +0.04** — statistically near-impossible in real retail data.
 
 ### 🔟 Age Distribution of Customers
+![image alt]()
 - Remarkably flat — every age bin sits between **350–420 customers**
 - No natural demographic skew across a 50-year age span
 - **Root cause** of the flat trends observed throughout the entire analysis

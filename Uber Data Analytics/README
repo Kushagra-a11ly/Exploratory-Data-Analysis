@@ -1,638 +1,151 @@
-<div align="center">
-
-```
-██╗   ██╗██████╗ ███████╗██████╗     ███████╗██████╗  █████╗
-██║   ██║██╔══██╗██╔════╝██╔══██╗    ██╔════╝██╔══██╗██╔══██╗
-██║   ██║██████╔╝█████╗  ██████╔╝    █████╗  ██║  ██║███████║
-██║   ██║██╔══██╗██╔══╝  ██╔══██╗    ██╔══╝  ██║  ██║██╔══██║
-╚██████╔╝██████╔╝███████╗██║  ██║    ███████╗██████╔╝██║  ██║
- ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚══════╝╚═════╝ ╚═╝  ╚═╝
-```
-
-# Ride Analytics — Exploratory Data Analysis · 2024
-
-**148,770 bookings · 21 features · Delhi, India · Full Year 2024**
-
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Pandas](https://img.shields.io/badge/Pandas-1.5+-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![Seaborn](https://img.shields.io/badge/Seaborn-0.12+-4C72B0?style=for-the-badge)](https://seaborn.pydata.org)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
-[![License](https://img.shields.io/badge/License-Educational-22c55e?style=for-the-badge)](LICENSE)
-
-</div>
-
----
-
-## What This Project Is
-
-A ground-up exploratory analysis of Uber's Delhi ride operations across all of 2024. The goal is not just to describe the data — it's to answer real business questions about where rides go wrong, where revenue is being left on the table, and what the numbers actually mean operationally.
-
-The analysis covers 14 visualisation sections, statistical deep-dives, and ends with concrete recommendations backed by the data.
-
----
-
-## The Numbers at a Glance
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    PLATFORM SNAPSHOT · 2024                     │
-├──────────────────────┬──────────────────────────────────────────┤
-│  Total Bookings      │  148,770                                 │
-│  Completed Rides     │  ~93,000          (65.96%)               │
-│  Driver Cancels      │  ~27,000          (18.15%)               │
-│  Customer Cancels    │  ~11,000          ( 7.45%)               │
-│  No Driver Found     │  ~11,000          ( 7.40%)               │
-│  Incomplete Rides    │  ~9,500           ( 6.04%)               │
-├──────────────────────┼──────────────────────────────────────────┤
-│  Vehicle Types       │  6 categories                            │
-│  Payment Methods     │  5 methods                               │
-│  Coverage            │  Delhi, India · daily granularity        │
-└──────────────────────┴──────────────────────────────────────────┘
-```
-
----
-
-## Files
-
-```
-uber-eda/
-├── Uber_Data_Analytics.csv   ← raw dataset  (148,770 rows × 21 cols)
-├── uber_eda.ipynb            ← analysis notebook
-└── README.md                 ← you are here
-```
-
----
-
-## Dataset Schema
-
-| # | Column | Type | Description |
-|---|--------|------|-------------|
-| 1 | `Date` | Date | Booking date |
-| 2 | `Time` | Time | Booking time |
-| 3 | `Booking ID` | String | Unique ride identifier |
-| 4 | `Booking Status` | Categorical | Completed / Cancelled by Driver / Cancelled by Customer / No Driver Found / Incomplete |
-| 5 | `Customer ID` | String | Unique customer identifier |
-| 6 | `Vehicle Type` | Categorical | Auto · Go Mini · Go Sedan · eBike/Bike · Premier Sedan · UberXL |
-| 7 | `Pickup Location` | String | Ride origin |
-| 8 | `Drop Location` | String | Ride destination |
-| 9 | `Avg VTAT` | Float | Driver-to-pickup time (minutes) |
-| 10 | `Avg CTAT` | Float | Pickup-to-drop time (minutes) |
-| 11 | `Cancelled Rides by Customer` | Int | Customer cancellation flag |
-| 12 | `Reason for cancelling by Customer` | Categorical | Root cause of customer cancel |
-| 13 | `Cancelled Rides by Driver` | Int | Driver cancellation flag |
-| 14 | `Driver Cancellation Reason` | Categorical | Root cause of driver cancel |
-| 15 | `Incomplete Rides` | Int | Incomplete ride flag |
-| 16 | `Incomplete Rides Reason` | Categorical | Root cause of incomplete ride |
-| 17 | `Booking Value` | Float | Fare amount (₹) |
-| 18 | `Ride Distance` | Float | Trip distance (km) |
-| 19 | `Driver Ratings` | Float | Customer → Driver rating (1–5) |
-| 20 | `Customer Rating` | Float | Driver → Customer rating (1–5) |
-| 21 | `Payment Method` | Categorical | UPI · Cash · Credit Card · Uber Wallet · Debit Card |
-
----
-
-## Analysis Questions
-
-The notebook is built around ten business questions:
-
-```
- 1.  What share of rides actually complete — and what's eating the rest?
- 2.  Which vehicle type generates the most revenue?
- 3.  Why are drivers cancelling, and how often?
- 4.  How are fares distributed across the platform?
- 5.  Does ride distance reliably predict booking value?
- 6.  When is demand highest — by hour and by day?
- 7.  Which payment method dominates, and what does that tell us?
- 8.  Do ratings correlate with anything that matters commercially?
- 9.  Which pickup zones drive the most bookings?
- 10. What features most strongly impact revenue?
-```
-
----
-
-## Pipeline
-
-```
- RAW CSV  →  INSPECT  →  CLEAN  →  ANALYSE  →  VISUALISE  →  INSIGHT  →  ACT
-```
-
----
-
-## Data Cleaning
-
-Every transformation is intentional — here's what was done and why:
-
-| Column | Method | Why |
-|--------|--------|-----|
-| `Cancelled Rides by Customer/Driver` | `fillna(0)` | Absence of flag = ride was not cancelled |
-| `Cancellation Reason (Customer/Driver)` | `fillna('Not Cancelled')` | Absent reason = no cancellation occurred |
-| `Incomplete Rides` | `fillna(0)` | Absence of flag = ride was not incomplete |
-| `Incomplete Rides Reason` | `fillna('Completed')` | Absent reason = successful completion |
-| `Driver Ratings` | `fillna(mean)` | Mean imputation preserves distribution centre |
-| `Customer Rating` | `fillna(mean)` | Mean imputation preserves distribution centre |
-| `Booking Value` | `fillna(0)` | No recorded fare = no charge applied |
-| `Ride Distance` | `fillna(0)` | No recorded distance = no trip completed |
-| `Payment Method` | `fillna('Not Applicable')` | Flags unresolved payment records for review |
-| `Avg CTAT / Avg VTAT` | `fillna(median)` | Median is robust against the right-skewed tails |
-| Column names | strip → lower → `_` spaces | Consistent programmatic access throughout |
-
----
-
-## Analysis — Section by Section
-
----
-
-### 01 · Booking Status Distribution
-> *Countplot of all ride outcomes*
-
-```
-  Completed            ████████████████████████████████░  ~93,000   65.96%
-  Driver Cancelled     ██████████░░░░░░░░░░░░░░░░░░░░░░░  ~27,000   18.15%
-  Customer Cancelled   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ~11,000    7.45%
-  No Driver Found      ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ~11,000    7.40%
-  Incomplete           ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   ~9,500    6.04%
-```
-
-**What the data is saying:**
-- The platform completes nearly two-thirds of all bookings — solid, but a 34% non-completion rate at scale means tens of thousands of broken rides every month
-- Driver cancellations at ~27K are the single biggest failure mode — this is selective ride rejection, not random attrition
-- Customer cancellations (~11K) and "No Driver Found" (~11K) are statistically identical — almost certainly the same problem: customers cancelling while waiting for a driver who never shows
-- Incomplete rides (~9.5K) are the quietest issue but worth watching before they trend upward
-
----
-
-### 02 · Revenue by Vehicle Type
-> *Summed bar chart — total Booking Value per vehicle category*
-
-```
-  Auto            ████████████████████████████████  ~₹1.29 Cr   ← revenue leader
-  Go Mini         ████████████████████████████░░░░  ~₹1.04 Cr
-  Go Sedan        ████████████████████████░░░░░░░░    ~₹93 L
-  Premier Sedan   ████████████████████░░░░░░░░░░░░    ~₹79 L
-  Bike            ████████████████░░░░░░░░░░░░░░░░    ~₹63 L
-  eBike           ████████░░░░░░░░░░░░░░░░░░░░░░░░    ~₹36 L
-  Uber XL         ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    ~₹15 L   ← nearly invisible
-```
-
-**What the data is saying:**
-- Auto and Go Mini together account for ~₹2.33Cr — more than all other categories combined
-- Both are budget/mid-range options, which confirms this is a volume-driven platform, not a premium-driven one
-- eBike and Uber XL are generating so little revenue they barely justify their operational overhead
-- Premier Sedan's underperformance relative to Go Sedan suggests the price ceiling is hitting customer resistance
-
----
-
-### 03 · Pair Plot — Key Numerical Features
-> *Corner pairplot with KDE diagonals across 6 numerical variables*
-
-**Features:** `Avg VTAT` · `Avg CTAT` · `Booking Value` · `Ride Distance` · `Driver Ratings` · `Customer Rating`
-
-**What the data is saying:**
-- `Booking Value` and `Ride Distance` are the only pair with a meaningful relationship (r ≈ 0.42) — but distance still explains less than 20% of fare variance
-- Both wait-time distributions (`VTAT`, `CTAT`) pile up near zero with extreme right tails — most pickups are fast, but outliers are very bad
-- Ratings sit almost entirely between 3.0–5.0, concentrated near 4.5 — the lower half of the rating scale is functionally unused
-- Ride distances are heavily right-skewed — most trips are short urban hops under 10km
-
----
-
-### 04 · Driver Cancellation Reasons
-> *Horizontal countplot — breakdown of driver cancel reasons*
-
-| Reason | Count | Share of Driver Cancels |
-|--------|-------|------------------------|
-| Personal & Car Issues | ~6,500–8,000 | ~25% |
-| Customer-Related Issues | ~6,000–7,500 | ~25% |
-| Overcrowding / Excess Passengers | ~6,000–7,000 | ~25% |
-| Sick Customer | ~6,000–7,000 | ~25% |
-
-**What the data is saying:**
-- Every cancellation reason has almost identical volume — there is no single dominant cause, meaning there is no single fix
-- Overcrowding cancellations should not exist — passenger count should be captured at booking, not discovered at pickup
-- Personal & car issues point to a fleet maintenance and driver scheduling problem, both of which are preventable
-- Sick customer cancellations are a post-COVID behavioural norm that is now permanent — the platform needs a formal policy response, not silence
-
----
-
-### 05 · Booking Value Distribution
-> *Histogram with KDE overlay, 30 bins*
-
-**What the data is saying:**
-- ~60,000+ rides sit in the lowest fare bucket — the platform's heartbeat is cheap, frequent, short-distance trips
-- Fare frequency collapses after ₹500 — either strong price sensitivity or short average trip lengths preventing higher fares
-- A secondary cluster exists between ₹200–₹600 — sedans and AC cabs on slightly longer commutes
-- Rides above ₹1,000 exist but represent a negligible share of total volume
-- **The strategic implication is clear:** this is a volume-over-value business — operational efficiency and driver retention matter more than premium tier upselling
-
----
-
-### 06 · Ride Distance vs. Booking Value
-> *Scatter plot — distance on x-axis, fare on y-axis*
-
-**What the data is saying:**
-- Two rides of the same distance can cost anywhere from ₹0 to ₹4,000+ — distance alone explains little about price
-- The widest price variance occurs on the shortest rides (0–10km) — premium bookings on short distances are very common
-- A dense fare band between ₹500–₹2,000 exists across almost every distance range — this is the platform's pricing centre of gravity
-- Even 40–50km rides span the full revenue range, suggesting long-haul pricing may not be optimally structured
-
----
-
-### 07 · Driver Ratings Distribution
-> *Pie chart — driver rating categories (Low / Medium / High)*
-
-```
-  ┌─────────────────────────────────────────────┐
-  │  High  (4–5★)   ████████████████░  84.7%    │
-  │  Medium (2–4★)  ██░░░░░░░░░░░░░░░  15.3%    │
-  │  Low   (0–2★)   ░░░░░░░░░░░░░░░░░   ~0.0%   │
-  └─────────────────────────────────────────────┘
-```
-
-**What the data is saying:**
-- 84.7% in the "High" band sounds impressive; in ride-hailing it means "hasn't been flagged yet" — not "excellent"
-- 15.3% medium-rated drivers sounds small; at 148,770 total bookings, it translates to thousands of below-average rides per week
-- Near-zero low ratings reflect social pressure and rating inflation — customers rarely rate below 3 regardless of experience
-- The binary High/Medium split makes it impossible to identify truly exceptional drivers or truly problematic ones
-
----
-
-### 08 · Bookings by Hour
-> *Countplot across all 24 hours of the day*
-
-```
-  Hour  00 ██░ ~1,500
-  Hour  01 █░░ ~1,400
-  Hour  02 █░░ ~1,400
-  Hour  03 █░░ ~1,400
-  Hour  04 █░░ ~1,450
-  Hour  05 ██░ ~2,000
-  Hour  06 ███ ~3,500
-  Hour  07 ████ ~5,000
-  Hour  08 █████ ~7,000
-  Hour  09 ███████ ~9,500   ← morning peak
-  Hour  10 ██████ ~8,000
-  Hour  11 █████ ~7,000
-  Hour  12 ████ ~6,000
-  Hour  13 ████ ~5,500      ← midday trough
-  Hour  14 ████ ~6,000
-  Hour  15 █████ ~7,000
-  Hour  16 ██████ ~8,500
-  Hour  17 ████████ ~11,000
-  Hour  18 █████████ ~12,500  ← SINGLE PEAK HOUR
-  Hour  19 ████████ ~11,000
-  Hour  20 ██████ ~8,500
-  Hour  21 █████ ~7,500
-  Hour  22 █████ ~6,500
-  Hour  23 ████ ~5,500
-```
-
-**What the data is saying:**
-- 18:00 is the single most valuable hour of the day — driver supply must be at its peak between 17:00–19:00, no exceptions
-- The morning spike at 09:00 is real but weaker than expected — many riders use other transport for outbound commutes
-- 12:00–14:00 is the natural dead zone — ideal for driver incentive resets, maintenance, and targeted promotions
-- Late-night demand at 22:00–23:00 is consistent, not sporadic — it deserves dedicated supply, not scraps
-- Demand never hits zero even between 00:00–04:00 — shift workers and airport travellers form a small but dependable base
-
----
-
-### 09 · Top Pickup Locations
-> *Horizontal bar chart — top 10 pickup zones by booking volume*
-
-| Rank | Location | Bookings |
-|------|----------|----------|
-| 1 | Ashram | 940 |
-| 2 | Basai Dankot | 920 |
-| 3 | Lok Kalyan Marg | 915 |
-| 4 | Cyber Hub | 912 |
-| 5 | Kalkaji | 913 |
-| 6 | Kashmere Gate ISBT | 911 |
-| 7 | Narsinghpur | 910 |
-| 8 | Udyog Vihar | 909 |
-| 9 | Lajpat Nagar | 908 |
-| 10 | Nehru Place | 907 |
-
-**What the data is saying:**
-- A 33-booking spread across 10 radically different Delhi locations is statistically suspicious — real-world demand does not distribute this evenly
-- AIIMS in the top 10 represents a distinct demand type: healthcare-driven, time-sensitive, predictable — suited to dedicated driver allocation at shift-change hours
-- Dwarka Sector 21 (major metro terminal) signals strong last-mile demand — routine, price-sensitive, and highly repeatable
-- Geographic spread from south to centre to west confirms demand is genuinely decentralised — driver positioning must match
-
----
-
-### 10 · Payment Method Distribution
-> *Countplot of Payment Method across all bookings*
-
-```
-  Not Applicable  ████████████████████░  ~48,000   ← ⚠️ data quality issue
-  UPI             ███████████████████░░  ~46,000   ← dominant real method
-  Cash            ██████████░░░░░░░░░░░  ~26,000
-  Uber Wallet     █████░░░░░░░░░░░░░░░░  ~12,000
-  Credit Card     ████░░░░░░░░░░░░░░░░░  ~10,000
-  Debit Card      ███░░░░░░░░░░░░░░░░░░   ~8,000
-```
-
-**What the data is saying:**
-- "Not Applicable" being the single largest bar means any payment analysis is unreliable until this ~48K record gap is resolved
-- UPI's dominance is expected — India skipped cards and went straight from cash to UPI; the platform is correctly aligned
-- Cash at ~26K is not a legacy problem — it is an active, persistent segment that requires continued operational support
-- Uber Wallet at ~12K is underperforming; wallet users are high-frequency repeat customers and a natural loyalty mechanism that is being ignored
-- Credit and debit cards are irrelevant at current volumes — India's payment journey bypassed them entirely
-
----
-
-### 11 · Cancellation by Vehicle Type
-> *Grouped countplot — Booking Status across each Vehicle Type*
-
-**What the data is saying:**
-- Auto has both the highest completions (~23K) and the highest driver cancellations (~6,500) — demand is so high that Auto drivers can afford to cherry-pick rides
-- Go Mini is the most reliable category relative to its volume — lower cancellation ratios despite high completion numbers
-- Go Sedan's driver cancellation rate is disproportionately high — sedan drivers likely reject shorter or lower-margin routes
-- eBike and Uber XL are marginal across every single metric — completions, cancellations, and demand are all low
-- "No Driver Found" appears in every vehicle category without exception — this is a platform-level supply problem, not a category-level one
-
----
-
-### 12 · Correlation Heatmap
-> *Pearson correlation matrix — Booking Value, Ride Distance, Driver Ratings, Customer Rating*
-
-```
-                    Booking   Ride    Driver   Customer
-                    Value     Dist    Rating   Rating
-  Booking Value   [  1.00     0.42    0.00     0.00  ]
-  Ride Distance   [  0.42     1.00    0.00     0.00  ]
-  Driver Ratings  [  0.00     0.00    1.00    -0.001 ]
-  Customer Rating [  0.00     0.00   -0.001    1.00  ]
-```
-
-**What the data is saying:**
-- `r = 0.42` between fare and distance is the only number in this matrix worth acting on — and even then, distance explains less than 20% of fare variance
-- Driver ratings and customer ratings have zero correlation with any commercial variable — satisfaction is driven by experience quality this dataset simply does not measure
-- Drivers and customers rate completely independently of each other — a 5-star driver does not reliably earn a 5-star rating from the customer, and vice versa
-- The three near-zero off-diagonal values tell you the analysis needs richer features: surge multiplier, zone, time-of-day, vehicle age, driver tenure
-
----
-
-### 13 · Revenue by Day of Week
-> *Summed bar chart — total Booking Value per day*
-
-```
-  Saturday   ████████████████████████████████████  ~₹9.7 Cr   +50% vs weekday avg
-  Sunday     ███████████████████████████████████░  ~₹9.6 Cr   +48% vs weekday avg
-  ─────────────────────────────────────────────────────────────────────────────
-  Friday     ████████████████████████░░░░░░░░░░░░  ~₹6.7 Cr
-  Thursday   ███████████████████████░░░░░░░░░░░░░  ~₹6.6 Cr
-  Wednesday  ███████████████████████░░░░░░░░░░░░░  ~₹6.5 Cr
-  Tuesday    ███████████████████████░░░░░░░░░░░░░  ~₹6.5 Cr
-  Monday     ██████████████████████░░░░░░░░░░░░░░  ~₹6.4 Cr
-```
-
-**What the data is saying:**
-- The weekend premium is not subtle — Saturday and Sunday generate ~50% more revenue than any weekday; driver incentives must scale accordingly
-- Weekdays are remarkably flat — Monday through Thursday form a stable, predictable commuter revenue floor worth protecting
-- Friday is the biggest missed opportunity in the dataset — it should lead into the weekend premium but barely outperforms Tuesday; Friday evening surge strategy needs attention
-- If driver supply fails to scale on weekends, the platform misses its highest-value hours precisely when customers are most willing to spend
-
----
-
-### 14 · Ratings Distribution Comparison
-> *Overlapping KDE plots — Driver Ratings vs Customer Rating*
-
-| | Driver Ratings | Customer Ratings |
-|---|---|---|
-| Peak | 4.2 | 4.35 |
-| Shape | Narrow, single spike | Wider, three distinct bumps |
-| Below 3.5 | Near-zero | Near-zero |
-| Tail to 5.0 | Drops sharply | Stays elevated |
-
-**What the data is saying:**
-- Both distributions almost entirely ignore the bottom half of the rating scale — rating inflation is baked in on both sides
-- Driver ratings are judged more uniformly (tight spike at 4.2); customer ratings are more spread out and multi-modal
-- The three bumps in customer ratings (~4.35, ~4.6, ~5.0) reveal that drivers mentally anchor to specific round numbers rather than rating continuously
-- Drivers give out perfect 5-star scores to customers more readily than customers do to drivers — possibly to avoid conflict or encourage tips
-- In this environment, a 4.0 rating is a genuine quality warning sign — not an average score
-
----
-
-## Advanced Exploration
-
-```python
-# ── Revenue by Vehicle Type × Payment Method ──────────────────────────────
-df.groupby(['Vehicle Type', 'Payment Method'])['Booking Value'].agg(['sum', 'mean'])
-
-pd.pivot_table(
-    df,
-    values='Booking Value',
-    index='Vehicle Type',
-    columns='Payment Method',
-    aggfunc='sum'
-)
-
-# ── Cancellation Cross-tab ────────────────────────────────────────────────
-pd.crosstab(
-    df['Vehicle Type'],
-    df['Booking Status'],
-    normalize='index'
-) * 100
-
-# ── Outlier Detection (IQR) ───────────────────────────────────────────────
-Q1  = df['Booking Value'].quantile(0.25)
-Q3  = df['Booking Value'].quantile(0.75)
-IQR = Q3 - Q1
-
-outliers = df[
-    (df['Booking Value'] < Q1 - 1.5 * IQR) |
-    (df['Booking Value'] > Q3 + 1.5 * IQR)
-]
-
-# ── Distribution Shape ────────────────────────────────────────────────────
-from scipy.stats import skew, kurtosis
-print(f"Skewness : {skew(df['Booking Value'].dropna()):.4f}")
-print(f"Kurtosis : {kurtosis(df['Booking Value'].dropna()):.4f}")
-
-# ── High-Value Completed Rides ────────────────────────────────────────────
-df.query("`Booking Value` > 1000 and `Booking Status` == 'Completed'")
-```
-
----
-
-## Vehicle Fleet at a Glance
-
-| Vehicle | Bookings | Success Rate | Avg Distance | Total KM |
-|---------|----------|-------------|--------------|----------|
-| Auto | 12.88M | 91.1% | 25.99 km | 602K km |
-| eBike / Bike | 11.46M | 91.1% | 26.11 km | 537K km |
-| Go Mini | 10.34M | 91.0% | 25.99 km | 482K km |
-| Go Sedan | 9.37M | 91.1% | 25.98 km | 433K km |
-| Premier Sedan | 6.28M | 91.2% | 25.95 km | 292K km |
-| **UberXL** | **1.53M** | **92.2%** | 25.72 km | 72K km |
-
-> UberXL's 92.2% success rate is the highest in the fleet despite the lowest booking volume — its riders are more intentional and less likely to cancel.
-
----
-
-## Cancellation Deep Dive
-
-**Why customers cancel:**
-
-| Reason | Share |
-|--------|-------|
-| Wrong Address | 22.5% |
-| Driver Issues | 22.4% |
-| Driver Not Moving | 22.2% |
-| Change of Plans | 21.9% |
-| App Issues | 11.0% |
-
-**Why drivers cancel:**
-
-| Reason | Share |
-|--------|-------|
-| Customer-Related Issues | 25.3% |
-| Capacity Issues | 25.0% |
-| Personal & Car Issues | 24.9% |
-| Customer Behavior | 24.8% |
-
-Both sides show near-uniform distributions — no single cause dominates on either end. This is systemic friction, not isolated incidents.
-
----
-
-## Rating Summary
-
-| Vehicle Type | Customer Rating | Driver Rating |
-|---|---|---|
-| Go Sedan | **4.41** | 4.24 |
-| Auto | 4.40 | 4.23 |
-| Go Mini | 4.40 | 4.23 |
-| eBike / Bike | 4.40 | 4.23 |
-| Premier Sedan | 4.40 | 4.24 |
-| UberXL | 4.40 | **4.24** |
-
-The 0.01 spread across all six vehicle types is not differentiation — it is compression. The rating system is not surfacing meaningful quality signals.
-
----
-
-## Key Takeaways
-
-```
-┌──────────────────┬────────────────────────────────────────────────────────────┐
-│ Supply           │ ~11K "No Driver Found" is a platform-wide shortage,         │
-│                  │ not a zone or category issue                                │
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Cancellations    │ ~27K driver cancels split evenly across four causes —       │
-│                  │ requires four parallel fixes, not one                       │
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Revenue          │ Auto + Go Mini = ~₹2.33Cr combined; eBike + UberXL = ~₹51L│
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Pricing          │ Distance (r=0.42) is the only meaningful fare predictor;   │
-│                  │ vehicle type and surge matter more                          │
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Demand           │ 18:00 is the peak hour; weekends generate ~50% more        │
-│                  │ revenue than any weekday                                    │
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Payments         │ UPI leads real transactions; ~48K records unclassified      │
-├──────────────────┼────────────────────────────────────────────────────────────┤
-│ Ratings          │ Both sides inflate — a 4.0 is a warning, not a midpoint    │
-└──────────────────┴────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Recommendations
-
-**① Fix the cancellation system — not just the symptoms**
-- Capture group size at booking to eliminate overcrowding cancellations before they happen
-- Introduce dynamic cancellation penalties to disincentivise selective ride rejection
-- Build a driver wellness scheduling system to reduce personal/car-related abandonment
-
-**② Close the supply gap with precision**
-- Map every "No Driver Found" event to its time and zone — deploy targeted incentives exactly there
-- Pre-position drivers in the 17:00–19:00 window using demand forecasting; do not rely on passive surge
-
-**③ Capture the weekend premium properly**
-- Activate weekend-specific driver bonus schemes to ensure supply scales with the ~50% demand spike
-- Launch a Friday evening campaign — this is the most undercaptured demand window in the dataset
-
-**④ Fix the data before drawing more conclusions**
-- Reclassify ~48K "Not Applicable" payment records — payment analysis is unreliable until this is resolved
-- Add sub-reasons to "Customer-Related" driver cancellations — the current label is too broad to act on
-- Enrich future datasets with: surge multiplier · zone-level supply ratio · driver tenure · vehicle age
-
-**⑤ Invest in what works, deprioritise what doesn't**
-- Auto and Go Mini are the revenue engine — protect supply, reduce cancellations, strengthen incentives
-- Uber Wallet is an underutilised loyalty lever — wallet users are your highest-value repeat customers
-- eBike and Uber XL need a formal strategic review — they are not self-sustaining at current volumes
-
----
-
-## Use Cases
-
-This dataset is well-suited for:
-
-- `Cancellation Prediction` — classify pre-trip cancellation risk before a driver accepts
-- `Revenue Forecasting` — time-series modelling of daily and weekly booking value
-- `Supply-Demand Modelling` — map "No Driver Found" events to zone and hour for targeted intervention
-- `Driver Segmentation` — cluster by rating, cancel rate, earnings, and vehicle type
-- `Customer Segmentation` — segment by vehicle preference, payment method, and booking frequency
-- `Surge Pricing Analysis` — model fare variance unexplained by distance to surface surge patterns
-- `Rating System Research` — study bilateral rating behaviour and inflation at scale
-
----
-
-## Stack
-
-| Tool | Version | Role |
-|------|---------|------|
-| Python | 3.9+ | Core language |
-| pandas | ≥ 1.5 | Data loading, cleaning, aggregation |
-| NumPy | ≥ 1.23 | Numerical operations |
-| Matplotlib | ≥ 3.6 | Base plots |
-| Seaborn | ≥ 0.12 | Statistical visualisation |
-| SciPy | ≥ 1.9 | Skewness and kurtosis |
-| Jupyter | latest | Notebook environment |
-
----
-
-## How to Run
-
-```bash
-# Clone
+🚗 Uber Ride Analytics 2024 — Exploratory Data Analysis
+
+A comprehensive exploratory data analysis of 148,770 Uber ride records to uncover insights into demand patterns, revenue drivers, cancellations, operational efficiency, and customer experience.
+
+📌 Project Overview
+
+This project presents a structured end-to-end exploratory data analysis (EDA) of Uber ride operations data for 2024. The objective is to analyze the complete ride lifecycle—from booking request to completion or cancellation—and extract actionable business insights.
+
+The analysis focuses on identifying inefficiencies, understanding demand behavior, and evaluating key performance drivers across the platform.
+
+📊 Dataset Summary
+Metric	Value
+Total Records	148,770
+Features	21
+Time Period	Full Year 2024
+Geographic Scope	Delhi, India
+Vehicle Categories	6
+Payment Methods	5
+🎯 Objectives
+
+The analysis is designed to address the following business questions:
+
+What proportion of rides are successfully completed?
+Which vehicle categories contribute most to revenue?
+What are the primary drivers of ride cancellations?
+How does demand vary across time (hourly and weekly)?
+To what extent does ride distance influence pricing?
+Which locations generate the highest booking volumes?
+What payment methods are most preferred by customers?
+Do rating metrics meaningfully reflect service quality?
+🔄 Methodology
+
+The analytical workflow follows a standard data science pipeline:
+
+Data Ingestion → Data Cleaning → Feature Engineering → Exploratory Analysis → Visualization → Insight Generation
+🧹 Data Preparation
+
+Key preprocessing steps included:
+
+Handling missing values using context-appropriate strategies (mean, median, or logical defaults)
+Standardizing column names for consistency
+Converting date and time fields into usable formats
+Creating derived features such as hour of booking and day of week
+Ensuring no significant data loss during cleaning
+📊 Key Insights
+🚦 Booking Outcomes
+Approximately 66% of rides are completed
+Around 25% are cancelled, indicating operational inefficiencies
+Nearly 8% of bookings fail due to lack of driver availability, highlighting supply constraints
+💰 Revenue Analysis
+Auto and Go Mini segments generate the highest revenue due to high usage volume
+Premium categories contribute relatively less, indicating limited demand elasticity
+Revenue distribution suggests a volume-driven business model
+⏱️ Demand Patterns
+Peak demand occurs during evening hours (around 6 PM)
+Weekend revenue exceeds weekday performance by ~50%
+Midday demand remains consistently low
+❌ Cancellation Behavior
+Driver cancellations are notably high and distributed across multiple reasons
+No single dominant cause indicates system-wide inefficiencies
+Customer cancellations closely align with delays and availability issues
+📍 Geographic Trends
+Demand is distributed across multiple pickup locations
+No single dominant hotspot, requiring balanced driver allocation
+💳 Payment Preferences
+UPI is the leading payment method, reflecting regional digital adoption
+Cash remains a significant fallback option
+A large number of “Not Applicable” entries indicate data quality concerns
+⭐ Ratings Analysis
+Ratings are heavily concentrated between 4.0 and 5.0
+Minimal correlation between ratings and revenue or ride characteristics
+Indicates rating inflation and limited discriminatory value
+📈 Core Visualizations
+
+The analysis includes a diverse set of visualizations:
+
+Booking status distribution
+Revenue by vehicle type
+Pairwise feature relationships
+Cancellation reason analysis
+Demand trends by hour and day
+Pickup location analysis
+Payment method distribution
+Correlation heatmap
+🔬 Advanced Analysis
+
+Additional analytical techniques applied:
+
+Multi-dimensional aggregations using groupby and pivot_table
+Cross-tabulation with percentage normalization
+Outlier detection using the IQR method
+Distribution analysis using skewness and kurtosis
+Query-based filtering for high-value ride analysis
+💡 Strategic Recommendations
+
+Based on the analysis, the following actions are suggested:
+
+1. Improve Driver Retention & Behavior
+Introduce incentive and penalty mechanisms to reduce cancellations
+Optimize driver allocation and matching algorithms
+2. Address Supply Gaps
+Increase driver availability during peak hours
+Focus on regions with frequent “No Driver Found” cases
+3. Optimize Revenue Opportunities
+Enhance surge pricing strategies during weekends and peak hours
+Strengthen high-performing vehicle categories
+4. Enhance Data Quality
+Resolve inconsistencies in payment method records
+Improve granularity in cancellation reason tracking
+5. Strengthen Customer Experience
+Reduce wait times (VTAT/CTAT)
+Improve reliability in ride fulfillment
+🛠️ Tech Stack
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+SciPy
+Jupyter Notebook
+▶️ How to Run
 git clone https://github.com/yourusername/uber-eda.git
 cd uber-eda
 
-# Install dependencies
 pip install pandas numpy matplotlib seaborn scipy jupyter
 
-# Launch
 jupyter notebook uber_eda.ipynb
-```
+📌 Key Takeaways
+Supply-demand imbalance is a primary operational challenge
+Driver behavior significantly impacts ride completion rates
+Revenue is driven more by ride volume than premium pricing
+Ratings provide limited actionable insight due to compression
+Data quality improvements are essential for deeper analysis
+📄 License
 
-> `Uber_Data_Analytics.csv` must be in the same directory as the notebook.
+This project is intended for educational and analytical purposes.
 
----
+🚀 Conclusion
 
-## Notes
+This project demonstrates practical capabilities in:
 
-- All monetary values → **Indian Rupees (₹)**
-- All distances → **kilometres (km)**
-- `Avg VTAT` and `Avg CTAT` → **minutes**
-- The `Hour` column used in Section 08 is derived from the `Time` column — extract it before running that cell
+Data cleaning and preprocessing
+Exploratory data analysis
+Data visualization
+Translating data into actionable business insights
 
----
+If you want to go further, you could extend this project with:
 
-## Data Quality Status
-
-| Dimension | Status | Note |
-|---|---|---|
-| Completeness | ✅ High | Minimal missing values across 21 columns |
-| Consistency | ✅ High | Standardised categories throughout |
-| Temporal Coverage | ✅ Complete | Full year 2024, daily granularity |
-| Geographic Scope | ✅ Multi-zone | Delhi — multiple pickup and drop zones |
-| Class Balance | ✅ Good | All vehicle types and time periods represented |
-| Payment Records | ⚠️ Needs Fix | ~48K "Not Applicable" entries require investigation |
-
----
-
-<div align="center">
-
-*Uber Ride Operations · 2024 · Delhi, India*
-*148,770 bookings · 21 features · Built with Python*
-
-</div>
+Predictive modeling (e.g., cancellation prediction)
+Time-series forecasting
+Interactive dashboards (Power BI / Tableau / Streamlit)

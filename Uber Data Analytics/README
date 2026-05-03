@@ -1,5 +1,3 @@
-
-
 # 🚗 Uber Ride Analytics 2024 — Complete EDA
 
 > End-to-end exploratory data analysis of **148,770 Uber bookings** covering booking outcomes, revenue patterns, vehicle performance, cancellation behaviour, demand timing, payment trends, and customer satisfaction — built with Python, Pandas, Seaborn, and Matplotlib.

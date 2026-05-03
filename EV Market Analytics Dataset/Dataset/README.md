@@ -1,3 +1,7 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/72ee38864f722dc5d5f802200d1fb60618f3e8f6/EV%20Market%20Analytics%20Dataset/dataset-cover.png)
+ 
+
+
 # ⚡ EV Market Analytics Dataset — 2020 to 2026
 
 > A complete, realistic, and reproducible Electric Vehicle market dataset covering 2,000 models across 20 global manufacturers — built for price prediction, market analysis, and EV comparison research.

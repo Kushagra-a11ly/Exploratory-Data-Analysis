@@ -2,14 +2,6 @@
 
 **Delhi, India · Full Year 2024 · 148,770 Bookings · 21 Features**
 
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Pandas](https://img.shields.io/badge/Pandas-1.5+-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![Seaborn](https://img.shields.io/badge/Seaborn-0.12+-4C72B0?style=for-the-badge)](https://seaborn.pydata.org)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
-[![License](https://img.shields.io/badge/License-Educational-22c55e?style=for-the-badge)](LICENSE)
-
----
-
 ## Executive Summary
 
 This repository presents a comprehensive exploratory data analysis of Uber's ride operations in Delhi, India, conducted across the full calendar year of 2024. The study encompasses 148,770 booking records across 21 operational variables, with the objective of identifying performance inefficiencies, revenue optimisation opportunities, and data quality gaps that warrant strategic attention.

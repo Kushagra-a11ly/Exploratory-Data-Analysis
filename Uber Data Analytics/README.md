@@ -1,3 +1,7 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/b52a7331206a874e8f8bb10172f92bb58d71e0c7/Uber%20Data%20Analytics/dataset-cover.png)
+
+
+
 # Uber  Analytics — Exploratory Data Analysis
 
 **Delhi, India · Full Year 2024 · 148,770 Bookings · 21 Features**

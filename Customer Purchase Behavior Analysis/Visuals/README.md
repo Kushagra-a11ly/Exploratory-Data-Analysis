@@ -58,12 +58,14 @@ The report covers **10 visual analyses** across 5 analytical themes:
  
 1️⃣ Revenue by Category
 ![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4fea14b695298e07eabea214f123734bb04523f2/Customer%20Purchase%20Behavior%20Analysis/Visuals/Total%20Revenue%20by%20Category.jpg)
+
 - Clothing dominates at over $100,000 — more than the other three categories combined
 - Accessories is a reliable secondary engine at ~$74,000
 - Outerwear is the chronic underperformer at ~$19,000, even in winter
 
 2️⃣ Spending Behaviour by Gender
 ![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4fea14b695298e07eabea214f123734bb04523f2/Customer%20Purchase%20Behavior%20Analysis/Visuals/Spending%20Behaviour%20by%20Gender.jpg)
+
 - Male and female customers show **identical median spend (~$60)**
 - IQR is the same for both genders ($40–$80)
 - Gender has **no predictive power** over purchase amount

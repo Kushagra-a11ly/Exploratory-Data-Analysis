@@ -3,12 +3,6 @@
 > A structured, transaction-level dataset capturing retail and e-commerce customer behavior —
 > built for exploratory analysis, segmentation, forecasting, and machine learning.
 
-![Dataset Type](https://img.shields.io/badge/Type-Tabular-blue)
-![Domain](https://img.shields.io/badge/Domain-Retail%20%26%20E--Commerce-orange)
-![Level](https://img.shields.io/badge/Granularity-Transaction--Level-green)
-![Format](https://img.shields.io/badge/Format-CSV-lightgrey)
-
----
 
 ## 📑 Table of Contents
 

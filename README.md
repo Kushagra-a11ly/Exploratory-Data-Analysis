@@ -10,7 +10,6 @@
 ![seaborn](https://img.shields.io/badge/seaborn-0.13-4C72B0?style=flat)
 ![matplotlib](https://img.shields.io/badge/matplotlib-3.x-11557C?style=flat)
 ![plotly](https://img.shields.io/badge/plotly-5.x-3F4F75?style=flat&logo=plotly&logoColor=white)
-![license](https://img.shields.io/badge/license-MIT-97ca00?style=flat)
 ![status](https://img.shields.io/badge/status-complete-4c1?style=flat)
 ![code%20style](https://img.shields.io/badge/code%20style-PEP%208-6e5494?style=flat)
 ![dataset](https://img.shields.io/badge/dataset-ultimate%20games-007ec6?style=flat)

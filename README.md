@@ -3,7 +3,17 @@
 # Exploratory Data Analysis — Project Repository
 
 **Domain:** Data Analytics &nbsp;|&nbsp; **Language:** Python 3 &nbsp;|&nbsp; **Interface:** Jupyter Notebook
-
+![python](https://img.shields.io/badge/python-3.11-3776AB?style=flat&logo=python&logoColor=white)
+![jupyter](https://img.shields.io/badge/jupyter-notebook-F37626?style=flat&logo=jupyter&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-2.x-150458?style=flat&logo=pandas&logoColor=white)
+![seaborn](https://img.shields.io/badge/seaborn-0.13-4C72B0?style=flat)
+![matplotlib](https://img.shields.io/badge/matplotlib-3.x-11557C?style=flat)
+![plotly](https://img.shields.io/badge/plotly-5.x-3F4F75?style=flat&logo=plotly&logoColor=white)
+![license](https://img.shields.io/badge/license-MIT-97ca00?style=flat)
+![status](https://img.shields.io/badge/status-complete-4c1?style=flat)
+![code%20style](https://img.shields.io/badge/code%20style-PEP%208-6e5494?style=flat)
+![dataset](https://img.shields.io/badge/dataset-ultimate%20games-007ec6?style=flat)
+![charts](https://img.shields.io/badge/charts-15%20visualizations-dfb317?style=flat)
 ---
 
 ## Table of Contents

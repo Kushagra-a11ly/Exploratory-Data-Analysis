@@ -1,4 +1,4 @@
-![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/e1e8f6b4280c6039db20a2fc21d298099a29518a/Car%20%20Price%20Analysis/dataset-cover.jpeg)
+![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/c1f2a32f2c91341c6259bda2939b3a565395d93a/Car%20%20Price%20Analysis/Cover%20image.png)
 
 
 # 🚗 Car Price Analysis Dataset

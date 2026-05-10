@@ -3,6 +3,7 @@
 # Exploratory Data Analysis — Project Repository
 
 **Domain:** Data Analytics &nbsp;|&nbsp; **Language:** Python 3 &nbsp;|&nbsp; **Interface:** Jupyter Notebook
+
 ![python](https://img.shields.io/badge/python-3.11-3776AB?style=flat&logo=python&logoColor=white)
 ![jupyter](https://img.shields.io/badge/jupyter-notebook-F37626?style=flat&logo=jupyter&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-2.x-150458?style=flat&logo=pandas&logoColor=white)

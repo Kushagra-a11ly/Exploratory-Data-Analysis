@@ -12,7 +12,6 @@
 ![plotly](https://img.shields.io/badge/plotly-5.x-3F4F75?style=flat&logo=plotly&logoColor=white)
 ![status](https://img.shields.io/badge/status-complete-4c1?style=flat)
 ![code%20style](https://img.shields.io/badge/code%20style-PEP%208-6e5494?style=flat)
-![dataset](https://img.shields.io/badge/dataset-ultimate%20games-007ec6?style=flat)
 ![charts](https://img.shields.io/badge/charts-15%20visualizations-dfb317?style=flat)
 ---
 

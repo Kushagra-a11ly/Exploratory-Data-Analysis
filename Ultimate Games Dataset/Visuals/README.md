@@ -53,7 +53,9 @@ plt.grid(axis='x', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Genre Dominance](./visuals/01_genre_dominance.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/1.Top%2010%20Game%20Genres.png)
+
+---
 
 **Insights**
 
@@ -80,7 +82,7 @@ plt.grid(True, linestyle='--', alpha=0.5)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Releases Over Time](./visuals/02_releases_over_time.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/2.Game%20Releases%20Over%20Time.png)
 
 **Insights**
 
@@ -107,7 +109,7 @@ plt.grid(axis='y', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![User Rating Distribution](./visuals/03_user_rating_distribution.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/3.User%20Rating%20Distribution.png)
 
 **Insights**
 
@@ -134,7 +136,8 @@ plt.grid(True, linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Critic vs User Ratings](./visuals/04_critic_vs_user.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/4.Metacritic%20vs%20User%20Rating.png
+)
 
 **Insights**
 
@@ -162,7 +165,7 @@ plt.grid(axis='y', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Multiplayer Effect](./visuals/05_multiplayer_effect.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/5.Multiplayer%20Effect%20on%20Ratings.png)
 
 **Insights**
 
@@ -189,7 +192,7 @@ plt.grid(True, linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Platform vs Popularity](./visuals/06_platform_vs_popularity.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/6.Platform%20Reach%20vs%20Popularity.png)
 
 **Insights**
 
@@ -221,7 +224,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<!-- Add chart image here: ![ESRB Distribution](./visuals/07_esrb_distribution.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/7.ESRB%20Rating%20Distribution.png)
 
 **Insights**
 
@@ -249,7 +252,7 @@ plt.grid(True, linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Engagement Density](./visuals/08_engagement_density.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/8.Engagement%20Score%20Density.png)
 
 **Insights**
 
@@ -275,7 +278,8 @@ plt.title("Correlation Heatmap")
 plt.show()
 ```
 
-<!-- Add chart image here: ![Correlation Heatmap](./visuals/09_correlation_heatmap.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/9.Correlation%20Heatmap.png
+)
 
 **Insights**
 
@@ -305,7 +309,7 @@ plt.grid(axis='x', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Publisher Market Share](./visuals/10_publisher_share.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/10.%20Publisher%20Market%20Share.png)
 
 **Insights**
 
@@ -336,7 +340,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<!-- Add chart image here: ![Decade Production](./visuals/11_decade_production.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/11.Game%20Production%20by%20Decade.png)
 
 **Insights**
 
@@ -366,7 +370,8 @@ plt.grid(axis='x', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Playtime Outliers](./visuals/12_playtime_outliers.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/12.Average%20Playtime%20Outlier%20Analysis.png)
+
 
 **Insights**
 
@@ -394,7 +399,7 @@ plt.grid(axis='y', linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Popularity by Game Mode](./visuals/13_popularity_by_mode.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/13.Popularity%20Across%20Game%20Modes.png)
 
 **Insights**
 
@@ -421,7 +426,7 @@ plt.grid(True, linestyle='--', alpha=0.4)
 plt.show()
 ```
 
-<!-- Add chart image here: ![Achievements vs Engagement](./visuals/14_achievements_vs_engagement.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/4ae2204cd049758e9ad3d1d2f11c789716e43980/Ultimate%20Games%20Dataset/Visuals/14.Achievements%20vs%20Engagement.png)
 
 **Insights**
 

@@ -1,3 +1,7 @@
+![image alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/c1f2a32f2c91341c6259bda2939b3a565395d93a/Car%20%20Price%20Analysis/Cover%20image.png)
+
+
+
 # 🚗 Car Price Prediction — Exploratory Data Analysis
 
 > A comprehensive EDA of 2,500 automobile records spanning 7 global brands, 28 models, and 4 fuel types, uncovering pricing dynamics, brand positioning, and feature independence through 18 visualisations.

@@ -1,3 +1,5 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/af9a362c8b71bbe91f9648d913aad419b8895aa7/Ultimate%20Games%20Dataset/Ultimate_Games_Dataset.png)
+
 # 🎮 Ultimate Games Dataset — End-to-End Exploratory Data Analysis
 
 <div align="center">

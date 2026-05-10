@@ -449,7 +449,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<!-- Add chart image here: ![Univariate Distributions](./visuals/15_univariate_distributions.png) -->
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/6a459ce242d8d8e28a63a0603b59f9bb997bf046/Ultimate%20Games%20Dataset/Visuals/15.Numerical%20Columns%20Distribution.png)
 
 **Insights**
 

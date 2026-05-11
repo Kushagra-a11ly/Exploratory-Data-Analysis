@@ -1,4 +1,4 @@
-![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/af9a362c8b71bbe91f9648d913aad419b8895aa7/Ultimate%20Games%20Dataset/Ultimate_Games_Dataset.png)
+![image_alt]([https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/af9a362c8b71bbe91f9648d913aad419b8895aa7/Ultimate%20Games%20Dataset/Ultimate_Games_Dataset.png](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/962f84ea3e9de803854df43f9e1228c9adee4dec/Exploratory%20Data%20Analysis%20Repository%20Cover%20Image%20.jpeg))
 
 # Exploratory Data Analysis — Project Repository
 

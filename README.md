@@ -1,4 +1,4 @@
-![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/f23c1e13ae930435d8d7611b3bbfa0cb96104e3f/Exploratory%20Data%20Analysis%20Repository%20Cover%20Image%20.jpeg](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/f23c1e13ae930435d8d7611b3bbfa0cb96104e3f/Exploratory%20Data%20Analysis%20Repository%20Cover%20Image%20.jpeg))
+
 
 # Exploratory Data Analysis — Project Repository
 

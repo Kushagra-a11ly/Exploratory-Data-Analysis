@@ -1,3 +1,7 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/e65152d2b26f90536a2777d7efd25c5bdbe18163/CarDekho%20Used%20Car%20Dataset%20Analysis/dataset-cover.png)
+
+
+
 # 🚗 CarDekho Used Car Dataset — Exploratory Data Analysis (EDA)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)

@@ -1,5 +1,4 @@
-![image_alt]([https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/af9a362c8b71bbe91f9648d913aad419b8895aa7/Ultimate%20Games%20Dataset/Ultimate_Games_Dataset.png](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/962f84ea3e9de803854df43f9e1228c9adee4dec/Exploratory%20Data%20Analysis%20Repository%20Cover%20Image%20.jpeg))
-
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/e21c6ee0c11f56c03d96e3730e26d118c2463806/Exploratory%20Data%20Analysis%20Repository%20Cover%20Image%20.jpeg)
 # Exploratory Data Analysis — Project Repository
 
 **Domain:** Data Analytics &nbsp;|&nbsp; **Language:** Python 3 &nbsp;|&nbsp; **Interface:** Jupyter Notebook

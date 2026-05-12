@@ -1,5 +1,5 @@
-# 🚗 CarDekho Used Car Dataset — Exploratory Data Analysis (EDA)
-
+# 🚗 CarDekho Used Car Dataset — Detailed Report
+ 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-1.24%2B-013243?style=for-the-badge&logo=numpy&logoColor=white)

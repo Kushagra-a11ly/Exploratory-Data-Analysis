@@ -24,176 +24,148 @@ This project explores the Indian used car market through structured visual analy
 ## 📊 EDA Questions & Visual Insights
 
 ---
+### Q1. What are the top 15 most common car brands?
 
-### Q1 — Top 15 Most Common Car Brands
-
-![Top 15 Car Brands]()
-
-**Key Takeaways**
-- Maruti dominates with ~5,000 units — nearly **67% more** than second-place Hyundai (~3,000), cementing its position as India's undisputed mass-market leader
-- Hyundai and Honda form a strong second tier, reflecting high consumer trust in Korean and Japanese brands
-- A sharp drop-off after Honda (~1,500) reveals a fragmented mid-market with no clear challenger to the top three
-- European luxury brands (BMW, Mercedes-Benz, Skoda, Audi, Volkswagen) cluster in the lower half — niche players in a price-sensitive market
-- Datsun and Jaguar's minimal presence signals limited model offerings and weak brand traction at opposite ends of the spectrum
+**Key Insights:**
+- Maruti dominates the Indian car market with ~5,000 units — nearly **67% more** than second-place Hyundai (~3,000), reinforcing its position as the undisputed mass-market leader.
+- Hyundai and Honda form a distant but strong second tier, suggesting a competitive mid-range segment where Korean and Japanese brands hold significant consumer trust.
+- A sharp drop-off occurs after Honda (~1,500), with Mahindra, Toyota, and Ford clustering around 800–1,050 units, indicating a fragmented mid-market with no clear challenger to the top three.
+- European luxury brands (BMW, Mercedes-Benz, Skoda, Audi, Volkswagen) collectively appear in the lower half, reflecting their niche premium positioning in a price-sensitive, value-driven market.
+- Datsun and Jaguar's minimal presence signals either weak brand traction or limited model offerings, highlighting the difficulty of sustaining market share at both the budget and ultra-luxury ends of the spectrum.
 
 ---
 
-### Q2 — Vehicle Age vs. Selling Price
+### Q2. How does vehicle age impact the selling price?
 
-![Vehicle Age vs Selling Price]()
-
-**Key Takeaways**
-- Strong negative correlation between vehicle age and price confirms the expected depreciation curve — 0–5 year vehicles command significantly higher prices
-- Extreme outliers (~₹40M, ~₹25M) appear in the 1–4 year range, likely representing high-end luxury vehicles retaining premium valuations
-- The widest price spread and highest density fall between 0–10 years — the most active segment of the used car market
-- Beyond 10 years, prices compress sharply near zero, indicating rapid value erosion and limited buyer willingness to pay
-- A handful of 25–29 year outliers near zero likely represent end-of-life or vintage vehicles with negligible resale value
+**Key Insights:**
+- A strong negative correlation exists between vehicle age and selling price, confirming the expected depreciation trend — newer vehicles (0–5 years) command significantly higher prices than older ones.
+- The most extreme price outliers (~₹40M and ~₹25M) appear in the 1–4 year age range, likely representing luxury or high-end vehicles that retain premium valuations even as used cars.
+- The highest price density and widest spread occur between 0–10 years, suggesting this is the most active and competitive segment of the used car market.
+- Beyond 10 years, selling prices compress sharply and cluster near zero, indicating rapid value erosion and limited buyer willingness to pay a premium for aging vehicles.
+- A few outliers exist at 25–29 years with near-zero prices, likely representing vintage or end-of-life vehicles with negligible resale value.
 
 ---
 
-### Q3 — Kilometers Driven vs. Selling Price
+### Q3. Does higher mileage driven reduce the selling price?
 
-![Kilometers Driven vs Selling Price]()
-
-**Key Takeaways**
-- Clear inverse relationship — lower-mileage vehicles consistently fetch higher prices, validating mileage as a key depreciation driver
-- Highest-priced vehicles (₹25M–₹40M) are concentrated below 50,000 KM — low-mileage luxury cars retain premium value far better than high-usage counterparts
-- The majority of listings cluster between 0–200,000 KM, reflecting a younger, well-maintained inventory
-- Beyond 500,000 KM, resale prices flatten near zero — high-mileage vehicles have minimal market appeal
-- A notable outlier at ~3.8M KM likely represents a data anomaly or commercial vehicle — flagged for treatment before modelling
+**Key Insights:**
+- A clear inverse relationship exists between kilometers driven and selling price — vehicles with lower mileage consistently fetch higher prices, validating mileage as a key depreciation driver.
+- The highest-priced vehicles (₹25M–₹40M) are concentrated below 50,000 KM, suggesting that low-mileage luxury cars retain their premium value far better than high-usage counterparts.
+- The majority of data points cluster near 0–200,000 KM, reflecting a younger, well-maintained inventory dominates the market.
+- Beyond 500,000 KM, selling prices flatten near zero — high-mileage vehicles have minimal resale appeal.
+- A notable outlier at ~3.8M KM likely represents a data anomaly or specialized commercial vehicle, warranting further investigation before modeling.
 
 ---
 
-### Q4 — Brands with Highest Average Selling Price
+### Q4. Which brands have the highest average selling prices?
 
-![Average Selling Price by Brand]()
-
-**Key Takeaways**
-- Ferrari leads at ~₹40M — nearly **60% higher** than Rolls-Royce (~₹24M), reinforcing its status as the most aspirational brand in the used luxury segment
-- A clear three-tier hierarchy emerges: ultra-luxury (Ferrari, Rolls-Royce) → premium luxury (Bentley, Maserati, Porsche, Lexus) → accessible luxury (BMW, Jaguar, Mercedes-Benz, Audi)
-- Bentley at ~₹9.5M sits well below Rolls-Royce, suggesting higher depreciation rates or a broader model range skewing its average down
-- Mercedes-AMG and Land Rover cluster around ₹4M–₹5M — strong resale positioning in performance and SUV luxury segments
-- ISUZU's inclusion flags a potential data quality issue — its average may be inflated by a small number of high-value entries
+**Key Insights:**
+- Ferrari leads at ~₹40M average selling price, nearly **60% higher** than second-place Rolls-Royce (~₹24M), cementing its status as the most aspirational brand in the used luxury car market.
+- A steep three-tier hierarchy is visible — ultra-luxury (Ferrari, Rolls-Royce), premium luxury (Bentley, Maserati, Porsche, Lexus), and accessible luxury (BMW, Jaguar, Mercedes-Benz, Audi).
+- Bentley at ~₹9.5M sits significantly below Rolls-Royce, suggesting either higher depreciation rates or a broader model range skewing its average downward.
+- Mercedes-AMG and Land Rover cluster around ₹4M–₹5M, showing strong resale positioning in performance and SUV luxury segments.
+- ISUZU's surprise inclusion in the top 15 flags a potential data quality issue — its average may be inflated by limited, high-value entries.
 
 ---
 
-### Q5 — Engine Capacity Distribution
+### Q5. How is engine capacity distributed across the dataset?
 
-![Engine Capacity Distribution]()
-
-**Key Takeaways**
-- Heavily right-skewed with a dominant peak at ~1,200 CC (~5,400 units), consistent with India's price and fuel-efficiency-sensitive consumer base
-- A secondary cluster between 1,500–2,500 CC represents mid-range sedans, SUVs, and diesel vehicles
-- Two natural market breakpoints appear: after 1,200 CC (economy vs. mid-range) and after 2,500 CC (mid-range vs. premium)
-- Engine capacities above 3,000 CC are extremely rare — high ownership costs and limited demand suppress large-displacement vehicles
-- The multimodal distribution (spikes at 1,000 / 1,500 / 2,000 / 2,500 CC) reveals standardized sizing across manufacturers
+**Key Insights:**
+- The distribution is heavily right-skewed with a dominant peak at ~1,200 CC (~5,400 units), confirming small-engine vehicles dominate — consistent with India's price and fuel-efficiency-sensitive consumer base.
+- A secondary cluster is visible between 1,500–2,500 CC, representing mid-range sedans, SUVs, and diesel vehicles.
+- Two natural market breakpoints appear: after 1,200 CC (economy vs mid-range) and after 2,500 CC (mid-range vs premium).
+- Engine capacities above 3,000 CC are extremely rare, reflecting high ownership costs and limited demand for large-displacement vehicles in India.
+- The multimodal distribution (peaks at 1,000, 1,500, 2,000, 2,500 CC) indicates standardized engine sizing across manufacturers.
 
 ---
 
-### Q6 — Average Engine Capacity by Brand
+### Q6. Which brands have the highest or lowest average engine capacity?
 
-![Average Engine Capacity by Brand]()
-
-**Key Takeaways**
-- Rolls-Royce (~6,500 CC) and Bentley (~6,000 CC) lead by a wide margin — large-displacement engines are central to ultra-luxury brand identity
-- Engine size mirrors pricing hierarchy almost perfectly: ultra-luxury at 4,000–6,500 CC vs. mass-market at 1,000–1,200 CC, confirming displacement as a strong proxy for brand positioning
-- The 2,500–3,200 CC mid-zone is occupied by performance brands — Porsche, Mercedes-AMG, and Maserati
-- Indian domestic brands (Maruti, Tata, Mahindra, Renault) all fall below 2,200 CC, consistent with their affordability-focused product range
-- Datsun records the lowest average (~1,050 CC) — the polar opposite of Rolls-Royce
+**Key Insights:**
+- Rolls-Royce (~6,500 CC) and Bentley (~6,000 CC) lead by a significant margin, reflecting their large-displacement, high-torque engines central to ultra-luxury identity.
+- Engine-size hierarchy directly mirrors pricing hierarchy — ultra-luxury brands average 4,000–6,500 CC vs mass-market brands at 1,000–1,200 CC, confirming engine capacity as a strong proxy for brand positioning.
+- The 2,500–3,200 CC mid-zone is occupied by performance brands like Porsche, Mercedes-AMG, and Maserati.
+- Indian domestic brands (Maruti, Tata, Mahindra, Renault) all fall below 2,200 CC — consistent with their affordability-focused product range.
+- Datsun records the lowest average (~1,050 CC), the opposite extreme from Rolls-Royce.
 
 ---
 
-### Q7 — Fuel Type Distribution
+### Q7. Which fuel type is most commonly used in cars?
 
-![Fuel Type Distribution]()
-
-**Key Takeaways**
-- Petrol (~7,700) and Diesel (~7,500) dominate almost equally, together accounting for over **95%** of all listings — a long-standing ICE duopoly
-- Near-parity suggests balanced consumer preference, with Petrol marginally ahead possibly due to diesel taxation and urban entry restrictions
-- CNG (~350) represents a slowly growing niche driven by urban commuters seeking lower running costs
-- LPG and Electric vehicles together account for less than 1% of listings — alternative fuel adoption remains nascent
-- The near-zero Electric presence is particularly telling: despite growing new EV sales, the used EV market is virtually non-existent
+**Key Insights:**
+- Petrol (~7,700) and Diesel (~7,500) dominate almost equally, together accounting for over **95%** of all listings — a long-standing ICE duopoly.
+- The near-parity suggests a balanced consumer preference, with Petrol marginally ahead possibly due to diesel taxation policies and urban entry restrictions.
+- CNG vehicles (~350) represent a slowly growing niche, driven by urban commuters seeking lower running costs.
+- LPG and Electric vehicles collectively account for less than 1% of listings, highlighting the nascent stage of alternative fuel adoption.
+- The near-zero Electric presence is particularly telling — despite growing new EV sales, the used EV market remains virtually non-existent.
 
 ---
 
-### Q8 — Transmission Type Distribution
+### Q8. What is the distribution of transmission types?
 
-![Transmission Type Distribution]()
-
-**Key Takeaways**
-- Manual (~12,200) overwhelmingly dominates over Automatic (~3,200) at a roughly **80:20 split**, driven by lower purchase cost and cheaper maintenance
-- The 4:1 ratio confirms automatics have yet to make a significant dent in used car supply
-- Limited Automatic inventory could create a supply-demand imbalance — potentially driving higher resale prices as urban preferences shift
-- Manual dominance aligns strongly with the prevalence of small-engine, budget-friendly brands (Maruti, Hyundai, Honda)
-- As urbanization and traffic congestion grow, Automatic listings are expected to increase significantly in future datasets
+**Key Insights:**
+- Manual (~12,200) overwhelmingly dominates over Automatic (~3,200) at a roughly **80:20 split**, driven by lower purchase cost and cheaper maintenance preferences.
+- The 4:1 ratio suggests automatic vehicles have yet to make a significant dent in the used car supply chain.
+- Limited Automatic inventory (~3,200 units) could create a supply-demand imbalance, potentially driving higher resale prices for automatics as urban preferences shift.
+- The manual dominance aligns strongly with the dominance of small-engine, budget-friendly brands (Maruti, Hyundai, Honda).
+- As urbanization and traffic congestion grow, Automatic listings are expected to grow significantly in future datasets.
 
 ---
 
-### Q9 — Seller Type Distribution
+### Q9. Which seller type dominates the used car market?
 
-![Seller Type Distribution]()
-
-**Key Takeaways**
-- Dealers dominate at ~9,500 listings (~62%), nearly double Individual sellers (~5,700 / 37%), indicating a commercially organized resale ecosystem
-- Strong dealer presence reflects the professionalization of India's used car industry through organized players like CarDekho, Cars24, and OLX Autos
-- Individual sellers at 37% still represent a significant peer-to-peer channel — preferred by buyers seeking negotiation flexibility and direct ownership history
-- Trustmark Dealers account for a negligible ~150 listings (<1%), representing a major untapped opportunity in the quality-certification space
-- As consumer awareness around certification grows, Trustmark Dealers could reshape buyer confidence and command pricing premiums
+**Key Insights:**
+- Dealers dominate at ~9,500 listings (~62%), nearly double Individual sellers (~5,700 at ~37%), indicating a highly organized and commercially driven resale ecosystem.
+- The strong dealer presence reflects the increasing professionalization of India's used car industry through organized players like CarDekho, Cars24, and OLX Autos.
+- Individual sellers at ~37% still represent a significant peer-to-peer channel — preferred by buyers seeking negotiation flexibility and direct ownership history.
+- Trustmark Dealers account for a negligible ~150 listings (<1%), representing an enormous untapped growth opportunity in the quality-certification space.
+- As consumer awareness grows around certification programs, Trustmark Dealers could reshape buyer confidence and command pricing premiums.
 
 ---
 
-### Q10 — Correlation Heatmap (Numeric Features)
+### Q10. Are there any strong correlations between numeric features?
 
-![Correlation Heatmap]()
-
-**Key Takeaways**
-- Max power (r = 0.75) and engine capacity (r = 0.59) are the strongest positive predictors of selling price — performance specs drive premium valuations more than depreciation factors
-- Mileage shows strong negative correlations with engine size (−0.63) and max power (−0.53), revealing a fundamental trade-off between fuel efficiency and performance
-- Vehicle age (−0.24) and km driven (−0.08) have surprisingly weak correlations with selling price — a critical signal for feature selection in ML models
-- Engine-to-max_power correlation of 0.81 indicates near-multicollinearity — retaining both in a regression risks redundancy and overfitting
-- Mileage's negative correlation with seats (−0.44) confirms that compact economy cars cluster at the lower price end
+**Key Insights:**
+- Max power (r = 0.75) and engine capacity (r = 0.59) are the strongest positive predictors of selling price, confirming performance specs drive premium valuations more than depreciation factors.
+- Mileage shows a strong negative correlation with both engine size (−0.63) and max power (−0.53), revealing a fundamental trade-off between fuel efficiency and performance.
+- Vehicle age (−0.24) and km driven (−0.08) have surprisingly weak correlations with selling price — a critical insight for feature selection in ML models.
+- The engine-to-max_power correlation (0.81) indicates near-multicollinearity — retaining both in a regression model risks redundancy and overfitting.
+- Mileage's negative correlation with seats (−0.44) confirms that compact economy cars (small, fuel-efficient, fewer seats) cluster at the lower price end.
 
 ---
 
-### Q11 — Average Selling Price by Brand & Fuel Type
+### Q11. How does average selling price vary by brand and fuel type?
 
-![Average Selling Price by Brand and Fuel Type]()
-
-**Key Takeaways**
-- Ferrari Petrol (~₹39.5M) and Rolls-Royce Petrol (~₹24.2M) are extreme outliers — both exclusively petrol-powered, confirming ultra-luxury brands' zero dependency on alternative fuels
-- Maserati Diesel (~₹6.1M) and Porsche Diesel (~₹4.78M) are the highest diesel entries, reflecting performance-tuned engines with strong value retention
-- Mass-market brands (Maruti, Hyundai, Honda) show multi-fuel presence with prices clustered between ₹188K–₹694K across all fuel types
-- Toyota is the only brand with a notable Electric average (~₹1.85M), highlighting an early mover advantage in the hybrid/electric used car space
-- LPG is limited to Hyundai (~₹247K) and Maruti (~₹188K) — a budget-driven aftermarket modification losing relevance as CNG expands
+**Key Insights:**
+- Ferrari Petrol (~₹39.5M) and Rolls-Royce Petrol (~₹24.2M) are extreme high-value outliers — both exclusively petrol-powered, confirming ultra-luxury brands' zero dependency on alternative fuels.
+- Maserati Diesel (~₹6.1M) and Porsche Diesel (~₹4.78M) are the highest diesel-priced entries, reflecting performance-tuned diesel engines with strong value retention.
+- Mass-market brands (Maruti, Hyundai, Honda) show multi-fuel presence with prices clustered between ₹188K–₹694K across all fuel types.
+- Toyota is the only brand with a notable Electric average (~₹1.85M), highlighting its early mover advantage in the hybrid/electric used car space.
+- LPG is limited to Hyundai (~₹247K) and Maruti (~₹188K) — suggesting LPG is a budget-driven aftermarket modification losing relevance as CNG expands.
 
 ---
 
-### Q12 — Engine Capacity Distribution (Detailed)
+### Q12. How are engine capacities distributed (detailed)?
 
-![Engine Capacity Detailed Distribution]()
-
-**Key Takeaways**
-- Sharply right-skewed with a dominant spike at ~1,200 CC (~3,600 frequency) — small-displacement engines are by far the most common
-- Distinct spikes at standardized sizes (998, 1197, 1248, 1498, 1968, 2494 CC) reveal manufacturers clustering around displacement milestones to optimize tax brackets and emission norms
-- A secondary cluster of spikes between 1,500–2,500 CC represents the mid-range diesel and SUV segment at lower frequencies (~200–550)
-- Engine capacities beyond 3,000 CC are extremely sparse — large-displacement vehicles contribute negligible volume to the used car pool
-- The discrete, spiky distribution confirms engine capacity is a manufacturer-defined specification — important context for feature engineering
+**Key Insights:**
+- The distribution is sharply right-skewed with a dominant spike at ~1,200 CC (~3,600 frequency), confirming small-displacement engines are by far the most common.
+- Multiple distinct spikes at standardized sizes (998, 1197, 1248, 1498, 1968, 2494 CC) reveal manufacturers clustering around specific displacement milestones to optimize tax brackets and emission norms.
+- A secondary cluster of spikes between 1,500–2,500 CC represents the mid-range diesel and SUV segment at lower frequencies (~200–550).
+- Engine capacities beyond 3,000 CC are extremely sparse — large-displacement vehicles contribute negligible volume to the used car pool.
+- The spiky, discrete nature of the distribution underscores that engine capacity is a manufacturer-defined specification — important for feature engineering in ML models.
 
 ---
 
-### Q13 — Maximum Power Distribution
+### Q13. What is the distribution of maximum power values?
 
-![Maximum Power Distribution]()
-
-**Key Takeaways**
-- Heavily right-skewed with a dominant cluster between 60–100 bhp (~1,800 peak frequency), consistent with budget-brand dominance
-- Multiple sharp spikes between 60–150 bhp mirror the engine capacity pattern — max power is also a discrete, manufacturer-defined specification
-- A secondary cluster between 150–250 bhp represents performance-oriented mid-range vehicles (SUVs, diesel sedans, entry-level luxury)
-- Power outputs beyond 300 bhp are extremely rare — high-performance luxury and sports cars form a negligible-volume but high-value niche
-- Max power and engine CC correlate at r = 0.81 — reinforcing the case for using only one in a lean predictive pricing model
+**Key Insights:**
+- The distribution is heavily right-skewed with a dominant cluster between 60–100 bhp (~1,800 peak frequency), consistent with budget-friendly brand dominance.
+- Multiple sharp spikes between 60–150 bhp mirror the engine capacity pattern — max power is also a discrete, manufacturer-defined specification.
+- A secondary cluster between 150–250 bhp represents performance-oriented mid-range vehicles (SUVs, diesel sedans, entry-level luxury cars).
+- Power outputs beyond 300 bhp are extremely rare, isolating high-performance luxury and sports cars as a negligible-volume but high-value niche.
+- Max power and engine CC are highly correlated (r = 0.81) — reinforcing the case for using only one in a lean predictive pricing model.
 
 ---
-
 ## 🔑 Summary of Key Findings
 
 | Theme | Finding |

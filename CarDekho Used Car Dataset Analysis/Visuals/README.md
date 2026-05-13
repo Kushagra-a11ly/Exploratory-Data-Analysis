@@ -24,7 +24,7 @@ This project explores the Indian used car market through structured visual analy
 
 ---
 ### Q1. What are the top 15 most common car brands?
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/1.Top%2015%20Car%20Brands%20by%20Count.png)
 
 **Key Insights:**
 - Maruti dominates the Indian car market with ~5,000 units — nearly **67% more** than second-place Hyundai (~3,000), reinforcing its position as the undisputed mass-market leader.
@@ -37,7 +37,7 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q2. How does vehicle age impact the selling price?
 
-![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/1.Top%2015%20Car%20Brands%20by%20Count.png)
+![image_alt]()
 **Key Insights:**
 - A strong negative correlation exists between vehicle age and selling price, confirming the expected depreciation trend — newer vehicles (0–5 years) command significantly higher prices than older ones.
 - The most extreme price outliers (~₹40M and ~₹25M) appear in the 1–4 year age range, likely representing luxury or high-end vehicles that retain premium valuations even as used cars.

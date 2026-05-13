@@ -8,7 +8,9 @@
 
 ## Executive Summary
 
-This repository presents a comprehensive exploratory data analysis of Uber's ride operations in Delhi, India, conducted across the full calendar year of 2024. The study encompasses 148,770 booking records across 21 operational variables, with the objective of identifying performance inefficiencies, revenue optimisation opportunities, and data quality gaps that warrant strategic attention.
+This repository presents a comprehensive exploratory data analysis of Uber's ride operations in Delhi, India, conducted across the full calendar year of 2024. 
+
+The study encompasses 148,770 booking records across 21 operational variables, with the objective of identifying performance inefficiencies, revenue optimisation opportunities, and data quality gaps that warrant strategic attention.
 
 The analysis is structured across 14 visualisation modules, supported by statistical methodology, and culminates in a set of evidence-based operational recommendations.
 
@@ -117,7 +119,10 @@ The analysis is structured around the following ten business-oriented questions:
 
 ### 01 · Booking Status Distribution
 
-The platform achieves successful completion on approximately two-thirds of all bookings recorded. However, a non-completion rate of 34% — applied to an annual volume of 148,770 bookings — represents a substantial operational loss. Driver-initiated cancellations (~27,000) constitute the single most prevalent failure category, indicative of systematic selective ride rejection rather than isolated incidents. Customer cancellations (~11,000) and unassigned bookings (~11,000) are statistically equivalent in volume, suggesting that a significant proportion of customer cancellations occur during extended wait periods when driver assignment fails.
+The platform achieves successful completion on approximately two-thirds of all bookings recorded. 
+However, a non-completion rate of 34% — applied to an annual volume of 148,770 bookings — represents a substantial operational loss. 
+Driver-initiated cancellations (~27,000) constitute the single most prevalent failure category, indicative of systematic selective ride rejection rather than isolated incidents. 
+Customer cancellations (~11,000) and unassigned bookings (~11,000) are statistically equivalent in volume, suggesting that a significant proportion of customer cancellations occur during extended wait periods when driver assignment fails.
 
 ### 02 · Revenue by Vehicle Type
 

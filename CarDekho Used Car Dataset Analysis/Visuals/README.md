@@ -37,7 +37,8 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q2. How does vehicle age impact the selling price?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/2.Vehicle%20Age%20vs%20Selling%20Price.png)
+
 **Key Insights:**
 - A strong negative correlation exists between vehicle age and selling price, confirming the expected depreciation trend — newer vehicles (0–5 years) command significantly higher prices than older ones.
 - The most extreme price outliers (~₹40M and ~₹25M) appear in the 1–4 year age range, likely representing luxury or high-end vehicles that retain premium valuations even as used cars.
@@ -48,8 +49,7 @@ This project explores the Indian used car market through structured visual analy
 ---
 
 ### Q3. Does higher mileage driven reduce the selling price?
-
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/2.Vehicle%20Age%20vs%20Selling%20Price.png)
 
 **Key Insights:**
 - A clear inverse relationship exists between kilometers driven and selling price — vehicles with lower mileage consistently fetch higher prices, validating mileage as a key depreciation driver.
@@ -61,8 +61,7 @@ This project explores the Indian used car market through structured visual analy
 ---
 
 ### Q4. Which brands have the highest average selling prices?
-
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/4.Top%2015%20Brands%20by%20Average%20Selling%20Price.png)
 
 **Key Insights:**
 - Ferrari leads at ~₹40M average selling price, nearly **60% higher** than second-place Rolls-Royce (~₹24M), cementing its status as the most aspirational brand in the used luxury car market.
@@ -75,7 +74,7 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q5. How is engine capacity distributed across the dataset?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/5.Distribution%20of%20Engine%20Capacity%20(CC).png)
 **Key Insights:**
 - The distribution is heavily right-skewed with a dominant peak at ~1,200 CC (~5,400 units), confirming small-engine vehicles dominate — consistent with India's price and fuel-efficiency-sensitive consumer base.
 - A secondary cluster is visible between 1,500–2,500 CC, representing mid-range sedans, SUVs, and diesel vehicles.
@@ -87,7 +86,7 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q6. Which brands have the highest or lowest average engine capacity?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/6.Average%20Engine%20Capacity%20by%20Brand.png)
 **Key Insights:**
 - Rolls-Royce (~6,500 CC) and Bentley (~6,000 CC) lead by a significant margin, reflecting their large-displacement, high-torque engines central to ultra-luxury identity.
 - Engine-size hierarchy directly mirrors pricing hierarchy — ultra-luxury brands average 4,000–6,500 CC vs mass-market brands at 1,000–1,200 CC, confirming engine capacity as a strong proxy for brand positioning.
@@ -99,7 +98,7 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q7. Which fuel type is most commonly used in cars?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/7.Fuel%20Type%20Distribution.png)
 **Key Insights:**
 - Petrol (~7,700) and Diesel (~7,500) dominate almost equally, together accounting for over **95%** of all listings — a long-standing ICE duopoly.
 - The near-parity suggests a balanced consumer preference, with Petrol marginally ahead possibly due to diesel taxation policies and urban entry restrictions.
@@ -111,7 +110,7 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q8. What is the distribution of transmission types?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/8.Transmission%20Type%20Distribution.png)
 **Key Insights:**
 - Manual (~12,200) overwhelmingly dominates over Automatic (~3,200) at a roughly **80:20 split**, driven by lower purchase cost and cheaper maintenance preferences.
 - The 4:1 ratio suggests automatic vehicles have yet to make a significant dent in the used car supply chain.
@@ -122,8 +121,8 @@ This project explores the Indian used car market through structured visual analy
 ---
 
 ### Q9. Which seller type dominates the used car market?
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/9.Seller%20Type%20Distribution.png)
 
-![image_alt]()
 **Key Insights:**
 - Dealers dominate at ~9,500 listings (~62%), nearly double Individual sellers (~5,700 at ~37%), indicating a highly organized and commercially driven resale ecosystem.
 - The strong dealer presence reflects the increasing professionalization of India's used car industry through organized players like CarDekho, Cars24, and OLX Autos.
@@ -135,7 +134,8 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q10. Are there any strong correlations between numeric features?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/10.Correlation%20Heatmap%20of%20Numeric%20Features.png)
+
 **Key Insights:**
 - Max power (r = 0.75) and engine capacity (r = 0.59) are the strongest positive predictors of selling price, confirming performance specs drive premium valuations more than depreciation factors.
 - Mileage shows a strong negative correlation with both engine size (−0.63) and max power (−0.53), revealing a fundamental trade-off between fuel efficiency and performance.
@@ -147,7 +147,8 @@ This project explores the Indian used car market through structured visual analy
 
 ### Q11. How does average selling price vary by brand and fuel type?
 
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/11.Average%20Selling%20Price%20by%20Brand%20and%20Fuel%20Type.png)
+
 **Key Insights:**
 - Ferrari Petrol (~₹39.5M) and Rolls-Royce Petrol (~₹24.2M) are extreme high-value outliers — both exclusively petrol-powered, confirming ultra-luxury brands' zero dependency on alternative fuels.
 - Maserati Diesel (~₹6.1M) and Porsche Diesel (~₹4.78M) are the highest diesel-priced entries, reflecting performance-tuned diesel engines with strong value retention.
@@ -158,7 +159,8 @@ This project explores the Indian used car market through structured visual analy
 ---
 
 ### Q12. How are engine capacities distributed (detailed)?
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/12.Engine%20Capacity%20Distribution.png
+)
 
 **Key Insights:**
 - The distribution is sharply right-skewed with a dominant spike at ~1,200 CC (~3,600 frequency), confirming small-displacement engines are by far the most common.
@@ -170,9 +172,7 @@ This project explores the Indian used car market through structured visual analy
 ---
 
 ### Q13. What is the distribution of maximum power values?
-
-
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/0bd7addb8a864e6a7491f4eb92b941bcf3251e29/CarDekho%20Used%20Car%20Dataset%20Analysis/Visuals/13.Max%20Power%20Distribution.png)
 
 **Key Insights:**
 - The distribution is heavily right-skewed with a dominant cluster between 60–100 bhp (~1,800 peak frequency), consistent with budget-friendly brand dominance.

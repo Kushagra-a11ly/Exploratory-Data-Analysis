@@ -34,7 +34,7 @@
 
 This dataset spans the full modern Olympic era — from the inaugural 1896 Athens Games through Paris 2024. It combines athlete-level demographic and performance data with career-level medal tallies and country-level historical records, making it suitable for a wide range of analytical and machine learning tasks including medal prediction, athlete performance modelling, country dominance analysis, and sport participation trends.
 
-> ⚠️ **Analyst Note:** Several columns (`total_olympics_attended`, `is_record_holder`, `coach_name`) show uniform distributions consistent with synthetic generation. These should be treated as illustrative rather than analytically conclusive. See the EDA notebook for a full feature audit.
+> **Analyst Note:** Several columns (`total_olympics_attended`, `is_record_holder`, `coach_name`) show uniform distributions consistent with synthetic generation. These should be treated as illustrative rather than analytically conclusive. See the EDA notebook for a full feature audit.
 
 ---
 
@@ -58,7 +58,7 @@ This dataset spans the full modern Olympic era — from the inaugural 1896 Athen
 | 14 | `medal` | String | `Gold` / `Silver` / `Bronze` / `None` |
 | 15 | `result_value` | Float | Numeric performance result (time, distance, score, etc.) |
 | 16 | `result_unit` | String | Unit for `result_value` (seconds, metres, points, kg, etc.) |
-| 17 | `total_olympics_attended` | Integer | Career Games attended (1–5) ⚠️ |
+| 17 | `total_olympics_attended` | Integer | Career Games attended (1–5)  |
 | 18 | `total_medals_won` | Integer | Total career medals (Gold + Silver + Bronze) |
 | 19 | `gold_medals` | Integer | Career gold medals |
 | 20 | `silver_medals` | Integer | Career silver medals |
@@ -67,19 +67,17 @@ This dataset spans the full modern Olympic era — from the inaugural 1896 Athen
 | 23 | `country_total_medals` | Integer | Country's all-time total Olympic medals (as of 2024) |
 | 24 | `country_first_participation` | Integer | Year the country first participated in the Olympics |
 | 25 | `country_best_rank` | Integer | Country's best all-time medal-table rank |
-| 26 | `is_record_holder` | String | `World Record` / `Olympic Record` / `No` ⚠️ |
-| 27 | `coach_name` | String | Athlete's coach name ⚠️ |
+| 26 | `is_record_holder` | String | `World Record` / `Olympic Record` / `No`  |
+| 27 | `coach_name` | String | Athlete's coach name  |
 | 28 | `height_cm` | Float | Height in centimetres |
 | 29 | `weight_kg` | Float | Weight in kilograms |
 | 30 | `notes` | String | Extra context (e.g. `Personal Best`, `Disqualified`) |
-
-> ⚠️ Columns flagged show artificially uniform distributions — use with caution in predictive models.
 
 ---
 
 ## Sports Coverage
 
-### 🌞 Summer Olympics
+###  Summer Olympics
 
 | Sport | Example Events |
 |---|---|
@@ -104,7 +102,7 @@ This dataset spans the full modern Olympic era — from the inaugural 1896 Athen
 | Taekwondo | All weight classes |
 | Fencing | Foil, Sabre, Épée |
 
-### ❄️ Winter Olympics
+###  Winter Olympics
 
 | Sport | Example Events |
 |---|---|

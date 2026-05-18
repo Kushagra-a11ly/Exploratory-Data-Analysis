@@ -1,3 +1,5 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/82a79030d32cf98004f2bc0a11603c58ffac2ee9/Olympics%20Athletes%20Dataset%20(1896%E2%80%932024)/Dataset%20Cover.png)
+
 # 🏅 Olympics Athletes Dataset (1896–2024)
 
 > A comprehensive, analysis-ready dataset of Olympic athletes spanning 128 years of Summer and Winter Games — covering demographics, performance results, career statistics, and country-level records.

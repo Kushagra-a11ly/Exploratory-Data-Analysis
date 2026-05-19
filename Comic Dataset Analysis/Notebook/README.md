@@ -1,3 +1,6 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/6c9eb875968176c1daeaeddc7ec0704ec0d4c9f8/Comic%20Dataset%20Analysis/dataset-cover%20(1).png)
+
+
 # 📚 Comic Books Dataset — Exploratory Data Analysis
 
 <p align="center">

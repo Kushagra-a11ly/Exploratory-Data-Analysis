@@ -1,4 +1,4 @@
-![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/e65152d2b26f90536a2777d7efd25c5bdbe18163/CarDekho%20Used%20Car%20Dataset%20Analysis/dataset-cover.png)
+![image_alt]([https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/e65152d2b26f90536a2777d7efd25c5bdbe18163/CarDekho%20Used%20Car%20Dataset%20Analysis/dataset-cover.png](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/45d9fef70db1ed9bbefc388452efaa5e93956903/CarDekho%20Used%20Car%20Dataset%20Analysis/CarDekho%20Dataset%20Cover%20Image.jpg))
 
 
 

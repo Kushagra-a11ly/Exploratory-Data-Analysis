@@ -46,10 +46,10 @@ This project delivers a full **Exploratory Data Analysis (EDA)** of the Global C
 
 ## Analysis Sections
 
-### 1. 🏆 Top Performing Genres by Audience Rating
+### 1.Top Performing Genres by Audience Rating
+![image_alt]()
 Ranks all comic genres by mean audience rating (out of 10) to identify which genre combinations generate the strongest viewer engagement.
 
-**Chart type:** Horizontal bar chart with gradient colour scale
 
 | Rank | Genre | Rating |
 |------|-------|--------|
@@ -63,10 +63,9 @@ Ranks all comic genres by mean audience rating (out of 10) to identify which gen
 
 ---
 
-### 2. 📈 Comic Production Trend Over Time
+### 2.Comic Production Trend Over Time
+![image_alt]()
 A time-series view of annual comic production volumes from 2000 to 2026, capturing the industry's growth arc, peak, and recent correction.
-
-**Chart type:** Line chart (2000–2026)
 
 | Period | Output | Trend |
 |--------|--------|-------|
@@ -79,10 +78,9 @@ A time-series view of annual comic production volumes from 2000 to 2026, capturi
 
 ---
 
-### 3. 👥 Ratings Across Age Categories
+### 3.Ratings Across Age Categories
+![image_alt]()
 Compares average audience ratings across the five official age classification categories to assess whether content maturity level influences perceived quality.
-
-**Chart type:** Horizontal funnel / bar chart
 
 | Age Category | Avg Rating |
 |-------------|------------|
@@ -96,10 +94,9 @@ Compares average audience ratings across the five official age classification ca
 
 ---
 
-### 4. 🌍 Country-wise Average Ratings
+### 4.Country-wise Average Ratings
+![image_alt]()
 Compares average audience ratings by country (or collaborative country pair) of origin to identify which national comic traditions resonate most with global audiences.
-
-**Chart type:** Vertical bar chart with country colour coding
 
 **Top performers:**
 - 🥇 France / Iran — ~9.1
@@ -110,10 +107,10 @@ Compares average audience ratings by country (or collaborative country pair) of 
 
 ---
 
-### 5. 📦 Comic Format Popularity
+### 5.Comic Format Popularity
+![image_alt]()
 A donut chart breaking down the relative market share of all comic delivery formats, from traditional print to digital-first and platform-native formats.
 
-**Chart type:** Donut chart (16+ segments)
 
 | Format Bloc | Combined Share |
 |-------------|---------------|
@@ -126,10 +123,9 @@ A donut chart breaking down the relative market share of all comic delivery form
 
 ---
 
-### 6. 🎨 Rating Distribution by Theme / Color Style
+### 6.Rating Distribution by Theme / Color Style
+![image_alt]()
 Violin plots showing the full distribution of audience ratings segmented by visual color style, assessing whether artistic approach influences satisfaction scores.
-
-**Chart type:** Violin plot (8 styles)
 
 | Color Style | Notable Characteristic |
 |-------------|----------------------|
@@ -142,10 +138,9 @@ Violin plots showing the full distribution of audience ratings segmented by visu
 
 ---
 
-### 7. 🗺️ Top 30 Genre Distribution Across Countries
+### 7.Top 30 Genre Distribution Across Countries
+![image_alt]()
 A treemap visualising the top 30 genre-country combinations by count, revealing which genre archetypes have achieved the broadest international distribution.
-
-**Chart type:** Treemap
 
 | Rank | Genre | Count |
 |------|-------|-------|
@@ -159,10 +154,9 @@ A treemap visualising the top 30 genre-country combinations by count, revealing 
 
 ---
 
-### 8. 🔗 Correlation Between Business Metrics
+### 8.Correlation Between Business Metrics
+![image_alt]()
 A correlation heatmap examining pairwise relationships between Page Count, Release Year, Rating, and Volume Count.
-
-**Chart type:** Heatmap (4×4 correlation matrix)
 
 | Pair | Correlation | Interpretation |
 |------|-------------|----------------|
@@ -175,10 +169,9 @@ A correlation heatmap examining pairwise relationships between Page Count, Relea
 
 ---
 
-### 9. 📐 Page Count vs. Ratings
+### 9.Page Count vs. Ratings
+![image_alt]()
 A bubble scatter chart plotting individual comics by page count against audience rating, with bubble size representing volume count and colour indicating genre.
-
-**Chart type:** Bubble scatter chart
 
 **Key observations:**
 - Top-rated titles (9–10) appear at **all** page counts from 0 to 15k
@@ -191,10 +184,9 @@ A bubble scatter chart plotting individual comics by page count against audience
 
 ---
 
-### 10. 🔄 Production Status Funnel
+### 10.Production Status Funnel
+![image_alt]()
 A funnel chart breaking down the current production status of all titles: Completed, Ongoing, Hiatus, and Cancelled.
-
-**Chart type:** Funnel chart
 
 | Status | Count | Share |
 |--------|-------|-------|

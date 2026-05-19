@@ -48,6 +48,7 @@ This project delivers a full **Exploratory Data Analysis (EDA)** of the Global C
 
 ### 1.Top Performing Genres by Audience Rating
 ![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/a9f786602f4e8a0dd05f00f7597d5d014780c74d/Comic%20Dataset%20Analysis/Visuals/1.Top%20Performing%20Genres%20by%20Audience%20Rating.png)
+
 Ranks all comic genres by mean audience rating (out of 10) to identify which genre combinations generate the strongest viewer engagement.
 
 
@@ -64,7 +65,8 @@ Ranks all comic genres by mean audience rating (out of 10) to identify which gen
 ---
 
 ### 2.Comic Production Trend Over Time
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/a9f786602f4e8a0dd05f00f7597d5d014780c74d/Comic%20Dataset%20Analysis/Visuals/2.Comic%20Production%20Trend%20Over%20Time.png)
+
 A time-series view of annual comic production volumes from 2000 to 2026, capturing the industry's growth arc, peak, and recent correction.
 
 | Period | Output | Trend |
@@ -79,7 +81,8 @@ A time-series view of annual comic production volumes from 2000 to 2026, capturi
 ---
 
 ### 3.Ratings Across Age Categories
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/a9f786602f4e8a0dd05f00f7597d5d014780c74d/Comic%20Dataset%20Analysis/Visuals/3.Ratings%20Across%20Age%20Categories.png)
+
 Compares average audience ratings across the five official age classification categories to assess whether content maturity level influences perceived quality.
 
 | Age Category | Avg Rating |
@@ -95,7 +98,8 @@ Compares average audience ratings across the five official age classification ca
 ---
 
 ### 4.Country-wise Average Ratings
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/a9f786602f4e8a0dd05f00f7597d5d014780c74d/Comic%20Dataset%20Analysis/Visuals/4.Country-wise%20Average%20Ratings.png)
+
 Compares average audience ratings by country (or collaborative country pair) of origin to identify which national comic traditions resonate most with global audiences.
 
 **Top performers:**
@@ -108,7 +112,8 @@ Compares average audience ratings by country (or collaborative country pair) of 
 ---
 
 ### 5.Comic Format Popularity
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/5.Comic%20Format%20Popularity.png)
+
 A donut chart breaking down the relative market share of all comic delivery formats, from traditional print to digital-first and platform-native formats.
 
 
@@ -124,7 +129,8 @@ A donut chart breaking down the relative market share of all comic delivery form
 ---
 
 ### 6.Rating Distribution by Theme / Color Style
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/6.Rating%20Distribution%20by%20Theme%20%20Color%20Style.png)
+
 Violin plots showing the full distribution of audience ratings segmented by visual color style, assessing whether artistic approach influences satisfaction scores.
 
 | Color Style | Notable Characteristic |
@@ -139,7 +145,8 @@ Violin plots showing the full distribution of audience ratings segmented by visu
 ---
 
 ### 7.Top 30 Genre Distribution Across Countries
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/7.Top%2030%20Genre%20Distribution%20Across%20Countries.png)
+
 A treemap visualising the top 30 genre-country combinations by count, revealing which genre archetypes have achieved the broadest international distribution.
 
 | Rank | Genre | Count |
@@ -155,7 +162,8 @@ A treemap visualising the top 30 genre-country combinations by count, revealing 
 ---
 
 ### 8.Correlation Between Business Metrics
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/8.Correlation%20Between%20Business%20Metrics.png)
+
 A correlation heatmap examining pairwise relationships between Page Count, Release Year, Rating, and Volume Count.
 
 | Pair | Correlation | Interpretation |
@@ -170,7 +178,8 @@ A correlation heatmap examining pairwise relationships between Page Count, Relea
 ---
 
 ### 9.Page Count vs. Ratings
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/9.Page%20Count%20vs%20Ratings.png)
+
 A bubble scatter chart plotting individual comics by page count against audience rating, with bubble size representing volume count and colour indicating genre.
 
 **Key observations:**
@@ -185,7 +194,8 @@ A bubble scatter chart plotting individual comics by page count against audience
 ---
 
 ### 10.Production Status Funnel
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/ce07067ae3b23e3ee2c161dc8474b7fda1ad0045/Comic%20Dataset%20Analysis/Visuals/10.Production%20Status%20Funnel.png)
+
 A funnel chart breaking down the current production status of all titles: Completed, Ongoing, Hiatus, and Cancelled.
 
 | Status | Count | Share |

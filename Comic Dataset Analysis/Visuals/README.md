@@ -47,7 +47,7 @@ This project delivers a full **Exploratory Data Analysis (EDA)** of the Global C
 ## Analysis Sections
 
 ### 1.Top Performing Genres by Audience Rating
-![image_alt]()
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/a9f786602f4e8a0dd05f00f7597d5d014780c74d/Comic%20Dataset%20Analysis/Visuals/1.Top%20Performing%20Genres%20by%20Audience%20Rating.png)
 Ranks all comic genres by mean audience rating (out of 10) to identify which genre combinations generate the strongest viewer engagement.
 
 

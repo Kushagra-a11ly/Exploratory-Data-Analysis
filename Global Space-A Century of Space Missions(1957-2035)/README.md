@@ -1,3 +1,5 @@
+![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/b1aaba4d4b2e952f1daa57828250bfc2b53e5d14/Global%20Space-A%20Century%20of%20Space%20Missions(1957-2035)/Dataset%20Cover.jpg)
+
 # Global Space Missions Dataset
 
 ![Records](https://img.shields.io/badge/Records-10%2C500%2B-blue?style=for-the-badge&logo=databricks&logoColor=white)

@@ -1,159 +1,202 @@
 ![image_alt](https://github.com/Kushagra-a11ly/Exploratory-Data-Analysis/blob/b1aaba4d4b2e952f1daa57828250bfc2b53e5d14/Global%20Space-A%20Century%20of%20Space%20Missions(1957-2035)/Dataset%20Cover.jpg)
+# 🚀 Space Missions Dataset — Exploratory Data Analysis
 
-# 🚀 Global Space Missions Dataset — Exploratory Data Analysis
-
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Viz-4C72B0?style=for-the-badge&logo=python&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Charting-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML%20Models-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-Statistics-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
-![Dataset](https://img.shields.io/badge/Dataset-10%2C500%2B%20Missions-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)
+A comprehensive exploratory data analysis (EDA) of a synthetic space missions dataset spanning 1957–2035, covering mission status, agency performance, launch vehicles, cost distributions, and temporal growth trends.
 
 ---
 
-## Overview
+## 📁 Project Structure
 
-This notebook delivers a full **Exploratory Data Analysis (EDA)** of the Global Space Missions Dataset — a structured collection of 10,500+ mission records spanning 1957 to 2035+. The analysis covers data cleaning, univariate and bivariate exploration, time-series trend analysis, cost modelling, outlier detection, and forward-looking forecasts across 15 visualisation sections.
-
-Every chart is accompanied by professional analyst-grade insights examining not only what the data shows, but why it matters — including explicit flags where dataset construction patterns deviate from real-world spaceflight dynamics.
-
----
-
-## Dataset
-
-| Property | Value |
-|----------|-------|
-| File | `Space_Missions_Dataset.csv` |
-| Records | 10,500+ |
-| Features | 26 columns |
-| Time Span | 1957 – 2035+ |
-| Agencies | 12 + Joint Missions |
-
----
-
-## Libraries Used
-
-| Library | Purpose |
-|---------|---------|
-| `pandas` | Data loading, cleaning, aggregation, filtering |
-| `matplotlib` | Figure management, area charts, bar charts |
-| `seaborn` | Count plots, violin plots, box plots, line plots |
-| `numpy` | Numerical operations and array handling |
-| `scikit-learn` | Linear regression for cost trend prediction |
-| `scipy.stats` | Skewness, kurtosis, z-score outlier detection |
-
----
-
-## Data Cleaning
-
-The following preprocessing steps were applied before analysis:
-
-| Column | Treatment |
-|--------|-----------|
-| `Duration` | Null values filled with `0` |
-| `Crew_Members` | Null values filled with `0` |
-| `Partner_Agencies` | Null values filled with `'None'` |
-| `Failure_Reason` | Null values filled with `'Successful Mission'` |
-| `Key_Achievement` | Null values filled with `'Not Specified'` |
-| `End_Date` | Null values filled with `'Ongoing'` |
-| `Data_Returned` | Null values filled with `0` |
-| `Launch_Date` | Parsed to `datetime` for all time-series analyses |
-
----
-
-## Analysis Sections
-
-| # | Question | Chart Type | Key Finding |
-|---|----------|------------|-------------|
-| 1 | Which mission statuses occur most frequently? | Count plot | Success dominates at ~41%; Partial Success is smallest at ~6% |
-| 2 | Which agencies launched the most missions? | Horizontal bar | NASA leads (~980); SpaceX second (~950) ahead of all government agencies |
-| 3 | What are the most common mission categories? | Count plot | All 19 categories compressed into ~500–595 range — balanced sampling confirmed |
-| 4 | Which launch vehicles are most used? | Donut chart | Ariane 5 leads at 20.2%; Ariane family combined holds 35% |
-| 5 | How is mission cost distributed? | Violin plot | Uniform rectangular distribution — synthetic cost generation confirmed |
-| 6 | What is the distribution of crew types? | Donut chart | 74.9% Uncrewed vs 25.1% Crewed — crewed share elevated vs real-world |
-| 7 | Which destinations are most targeted? | Lollipop chart | Mercury leads — contradicts real-world history; ~40-mission range across all destinations |
-| 8 | How have missions changed over time? | Area line chart | Flat 60-year plateau → 4.4× surge to 460 missions at 2026 peak |
-| 9 | Which agency types dominate? | Bar chart | Government 82% vs Private 18% — historical ratio, not current market |
-| 10 | Which countries lead in space missions? | Horizontal bar | USA (~2,800) leads by 3×; remaining 9 countries within 160-mission band |
-| 11 | How will missions grow in the future? | Dual line + forecast | 4× surge 2018–2026; 70% collapse 2026–2028; new floor ~150–175 |
-| 12 | How will mission cost change over time? | Scatter + regression | Near-flat $200M rise over 78 years — cost is time-independent in this dataset |
-| 13 | Will missions become more successful? | Line chart | Stable 0.60–0.82 through 2018; collapse to 0.0 post-2023 is a labelling artefact |
-| 14 | Which rockets will dominate future launches? | Stacked bar | Ariane 5 leads despite retirement; Falcon 9 understated vs real-world dominance |
-| 15 | Which agencies are most cost-efficient? | Line chart | ISRO/JAXA most efficient (~$900M); SpaceX least efficient (~$7,350M) |
-
----
-
-## Advanced Analysis
-
-Beyond the 15 core visualisations, the notebook includes the following deeper explorations:
-
-**Cost Analysis**
-- Average mission cost by Agency Type × Mission Category cross-tabulation
-- Cost comparison pivot table: Agency Type vs Mission Status
-- IQR-based outlier detection — no outliers flagged due to uniform distribution
-- Z-score outlier detection (threshold: |z| > 3)
-- Cost trend over time with mean-reversion pattern confirmed
-
-**Failure Analysis**
-- Agency type failure rate cross-tabulation (normalised by row)
-- Government vs Private failure rate comparison
-
-**Distribution Analysis**
-- Skewness and kurtosis of `Cost_USD_Million`
-- Box plot outlier visualisation
-
-**Performance Aggregation**
-- Agency-level cost summary: mean, sum, max
-- Success rate by agency type (percentage normalised)
-
-**Utility Operations**
-- Random sampling, memory usage profiling
-- Sort by cost descending
-- Query filtering (`Cost_USD_Million > 1000`)
-- Derived feature engineering: `Cost_per_Day = Cost_USD_Million / Duration`
-
----
-
-## Key Analytical Findings
-
----
-
-## Dataset Limitations & Analyst Notes
-
-> The following limitations should be considered before using this dataset for operational or research purposes.
-
-**Synthetic Cost Distribution** — `Cost_USD_Million` follows a near-uniform distribution between ~$0 and ~$16,000M. Real-world mission costs are heavily right-skewed. Standard statistical methods assuming normality will produce unreliable results on this variable.
-
-**Balanced Category Sampling** — All mission categories, destinations, and agencies are represented in near-equal counts. Real-world distributions are highly skewed. Do not use raw category counts as proxies for market share or historical frequency.
-
-**Future Mission Labelling** — Missions classified as Upcoming or Future have no resolved outcomes. Including them in success rate calculations drives the metric toward zero — filter to `Mission_Phase = 'Past'` before any success rate analysis.
-
-**Private Sector Underrepresentation** — The aggregate 18% private share is a time-averaged figure suppressed by six decades of government-only records. Post-2015 analysis will show a substantially higher private share.
-
-**Retired Vehicle Forecasts** — Ariane 5 appears with a positive forecast segment despite retirement in 2023. Treat this as a labelling artefact and apply retirement flags before any demand forecasting work.
-
----
-
-## How to Run
-
-```bash
-# Install dependencies
-pip install pandas matplotlib seaborn numpy scikit-learn scipy
-
-# Launch notebook
-jupyter notebook Space_Missions_EDA.ipynb
+```
+space-missions-eda/
+│
+├── Space_Missions_Dataset.csv      # Source dataset
+├── eda_analysis.ipynb              # Main analysis notebook
+└── README.md                       # Project documentation
 ```
 
-**Input file required:** `Space_Missions_Dataset.csv` in the same directory as the notebook.
+---
+
+## 📊 Dataset Overview
+
+| Attribute        | Detail                              |
+|------------------|--------------------------------------|
+| Records          | ~10,500 missions                    |
+| Time Span        | 1957 – 2035 (historical + projected)|
+| Key Features     | Agency, Status, Destination, Cost, Duration, Crew, Launch Vehicle, Mission Category |
+| Data Type        | Synthetic / Balanced                |
+
+### Key Columns
+
+- `Mission_Name`, `Launch_Date`, `End_Date` — Mission identity and timeline
+- `Agency`, `Agency_Type`, `Country_Region` — Operator details
+- `Status` — Success / Failed / Ongoing / Upcoming / Partial Success
+- `Destination`, `Mission_Category` — Target and type classification
+- `Launch_Vehicle` — Rocket used
+- `Cost_USD_Million` — Mission budget
+- `Duration`, `Crew_Members`, `Data_Returned` — Operational metrics
+- `Failure_Reason`, `Key_Achievement`, `Partner_Agencies` — Contextual fields
 
 ---
 
-## Output
+## 🧹 Data Cleaning
 
-The notebook produces 15 primary visualisations and 8+ advanced analytical outputs, all rendered inline. No external output files are generated unless explicitly exported.
+Missing values were handled as follows:
+
+| Column             | Treatment                     |
+|--------------------|-------------------------------|
+| `Duration`         | Filled with `0`               |
+| `Crew_Members`     | Filled with `0`               |
+| `Partner_Agencies` | Filled with `'None'`          |
+| `Failure_Reason`   | Filled with `'Successful Mission'` |
+| `Key_Achievement`  | Filled with `'Not Specified'` |
+| `End_Date`         | Filled with `'Ongoing'`       |
+| `Data_Returned`    | Filled with `0`               |
 
 ---
 
-*Prepared by the Data Analytics Division · Global Space Missions EDA · May 2026*
+## 📈 Analyses Performed
+
+### 1. Mission Status Distribution
+- Success (~41%) dominates; ~30% missions are ongoing.
+- Failed missions represent ~8.7% of the dataset.
+
+### 2. Agency Mission Counts
+- NASA leads (~980 missions), closely followed by SpaceX (~950).
+- Private operators (SpaceX, Blue Origin) collectively rival major government agencies.
+
+### 3. Mission Category Distribution
+- All 19 categories fall within a narrow ~95-mission band — consistent with balanced synthetic sampling.
+
+### 4. Launch Vehicle Usage
+- Ariane 5 holds the largest share (20.2%), followed by Ariane 6 (14.8%) and Falcon 9 (13.8%).
+
+### 5. Mission Cost Distribution
+- Median cost ~$7,500M; near-uniform distribution — atypical of real-world cost data.
+- Negative values present; data quality flag raised.
+
+### 6. Crew Type Proportion
+- 74.9% Uncrewed vs. 25.1% Crewed.
+- Crewed proportion (~25%) is significantly elevated vs. real-world rates (~5–8%).
+
+### 7. Top Mission Destinations
+- Mercury leads (~598 missions) — a synthetic artefact given only 3 real Mercury missions exist.
+- All destinations span a compressed ~40-mission range.
+
+### 8. Mission Growth Over Time
+- Flat ~100 missions/year for 60 years (1957–2017), then a 4x surge to ~460 by 2026.
+- Sharp post-2026 contraction to ~140 missions may reflect dataset boundary effects.
+
+### 9. Agency Type Contribution
+- Government agencies: ~82% | Private operators: ~18%.
+- Private share is historically compressed; modern figures (post-2020) would show ~40–60% private.
+
+### 10. Top Countries by Mission Count
+- USA leads with ~2,800 missions — nearly 3× the count of the next closest nation.
+- Russia, China, Europe, and Japan cluster tightly between ~910–950.
+
+### 11. Mission Cost Trend Over Time
+- No meaningful cost trend; values oscillate within $6,500M–$8,500M across all decades.
+- Absence of post-2015 cost reduction contradicts real-world commercial spaceflight dynamics.
+
+### 12. Mission Success Rate Over Time
+- Stable 0.60–0.82 success rate from 1957–2018.
+- Post-2018 collapse to 0.0 is a labelling artefact from unresolved future missions.
+
+### 13. Future Launch Vehicle Demand
+- Forecast segments calculated as a fixed ~18–20% uplift on current counts — formulaic rather than demand-driven.
+
+### 14. Agency Cost Efficiency
+- ISRO/JAXA ranks most cost-efficient at ~$900M average.
+- SpaceX ranks least efficient at ~$7,350M — contradicts real-world pricing.
+
+### 15. Outlier Detection (IQR + Z-Score)
+- No outliers detected via standard methods — consistent with the near-uniform cost distribution.
+
+---
+
+## 🔬 Advanced Analysis
+
+```python
+# Agency + Mission Category average cost
+df.groupby(['Agency_Type', 'Mission_Category'])['Cost_USD_Million'].mean()
+
+# Pivot: Agency Type vs Mission Status
+pd.pivot_table(df, values='Cost_USD_Million', index='Agency_Type', columns='Status', aggfunc='mean')
+
+# Failure rate by agency type
+pd.crosstab(df['Agency_Type'], df['Status'], normalize='index')
+
+# Outlier detection (IQR)
+Q1, Q3 = df['Cost_USD_Million'].quantile([0.25, 0.75])
+IQR = Q3 - Q1
+outliers = df[(df['Cost_USD_Million'] < Q1 - 1.5*IQR) | (df['Cost_USD_Million'] > Q3 + 1.5*IQR)]
+
+# Z-score method
+from scipy.stats import zscore
+df['z'] = zscore(df['Cost_USD_Million'].dropna())
+df[df['z'] > 3]
+
+# Derived feature
+df.eval("Cost_per_Day = Cost_USD_Million / Duration")
+```
+
+---
+
+## ⚠️ Dataset Limitations
+
+> This dataset is **synthetic and balanced**. Key deviations from real-world spaceflight data include:
+
+- **Mission destinations** are uniformly distributed — Mercury has as many entries as Earth Orbit.
+- **Mission costs** show no inflationary trend and no post-2015 commercial reduction.
+- **Crewed mission proportion** (~25%) is ~3–5× higher than historical reality.
+- **Success rate** collapses post-2018 due to unresolved future mission labels, not actual failures.
+- **Agency rankings** reflect balanced sampling, not true historical launch volumes.
+
+These characteristics make the dataset suitable for **machine learning benchmarking and visualisation practice**, but it should **not** be used to draw conclusions about real-world spaceflight economics or agency performance without external validation.
+
+---
+
+## 🛠️ Dependencies
+
+```
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+```
+
+Install via:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn scipy
+```
+
+---
+
+## 🚀 Getting Started
+
+```python
+import pandas as pd
+df = pd.read_csv('Space_Missions_Dataset.csv')
+df['Launch_Date'] = pd.to_datetime(df['Launch_Date'])
+df.info()
+```
+
+---
+
+## 📌 Key Takeaways
+
+1. The USA dominates total mission count by a 3:1 margin over all other nations.
+2. A structural regime change in annual launch volume began in 2018, driven by commercial megaconstellations.
+3. Cost data shows no real trend — uniform distribution confirms synthetic generation.
+4. ISRO-linked collaborations represent the most cost-efficient mission profiles.
+5. The dataset is best suited for classification modelling and EDA skill-building, not empirical space industry research.
+
+---
+
+## 📄 License
+
+This project is for educational and analytical purposes. Dataset origin: synthetic / generated for practice use.
